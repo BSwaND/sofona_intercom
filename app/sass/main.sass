@@ -1,0 +1,487 @@
+@import vars
+@import fonts
+@import libs
+@import settings
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.45
+	font-family: 'Proxima Nova', sans-serif
+	overflow-x: hidden
+	color: $text
+	font-weight: 200
+
+a
+	&:hover
+		transition: all 0.4s
+	
+		
+h1,.h1, h2, .h2, h3, .h3
+	font-size: 26px
+	margin-bottom: 15px
+	text-align: center
+	text-transform: uppercase
+	font-weight: 600
+
+// star nav
+.nav
+	display: flex
+	li
+		display: block
+		margin: 0 20px
+	a
+		color: #fff
+		&:hover
+			text-decoration: none
+			color: $accent
+
+
+// End nav
+
+
+
+.header
+	color: #fff
+	padding: 15px 0
+	position: absolute
+	width: 100%
+	height: 80px
+	z-index: 50
+	.nav
+		margin-top: 15px
+		li
+		a
+			font-size: 13px
+	&_telephone_blok
+		text-align: right
+		margin-top: 15px
+		font-size: 18px
+			
+	
+.main-screen
+	margin-bottom: 60px
+	&__swiper-container
+		color: #fff
+		display: flex
+		.swiper
+			&-slide
+				&_body
+					background-repeat: no-repeat
+					background-size: cover
+					height: 540px
+					padding: 80px 0
+					&_inner
+						display: flex
+						padding-top: 120px
+						font-size: 18px
+						font-weight: 500
+					
+					&_content
+						flex:  9
+					&_asaid
+						flex:  3
+						font-size: 12px
+						margin-left: 30px
+						&__item
+							display: flex
+							margin-bottom: 30px
+							line-height: 14px
+							font-weight: 400
+							&__active
+								color: $accent
+								font-size: 14px
+								.swiper-slide_body_asaid__img
+									fill: $accent
+						&__text
+							flex: 0  1 200px
+							text-align: right
+							padding: 0 15px
+						&__img
+							fill: #fff
+							flex:  0 1 60px
+							height: 60px
+	&__header
+		font-size: 32px
+		margin-bottom: 15px
+		.accent-text
+			font-weight: 600
+			display: block
+			text-transform: uppercase
+		
+	.form-block
+		margin-top: 45px
+	
+// End main-screen
+		
+		
+		
+		
+		
+// Start gallery-works_section
+.gallery-works
+	&_section
+		padding: 20px 0
+	&__swiper-container
+		margin: 60px 0
+		height: 580px
+		padding-bottom: 60px
+		.swiper-slide
+			text-align: center
+			font-size: 18px
+			height: calc((100% - 30px) / 2)
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-shrink: 0
+			width: 100%
+			position: relative
+			transition-property: transform
+			background-size: cover
+			background-repeat: no-repeat
+			position: relative
+			transition: all 0.4s
+			cursor: pointer
+			&:hover
+				a
+					position: absolute
+					width: 100%
+					height: 100%
+					content: ''
+					top: 0
+					left: 0
+					background-color: $hover-foto
+					z-index: 5
+					display: flex
+					justify-content: center
+					align-items: center
+					align-content: flex-start
+				.gallery-works__foto,
+				.gallery-works__play
+					width: 30%
+					height: 30%
+					position: relative
+					z-index: 10
+					filter: invert(1)
+					background-size: contain
+					background-repeat: no-repeat
+				.gallery-works__play
+					background-image: url(../images/icon/play.svg)
+				.gallery-works__foto
+					background-image: url(../images/icon/foto.svg)
+
+// End gallery-works_section
+
+	
+	
+	
+// Start price-pool_section | expet-block
+.price-pool
+	margin-bottom: 60px
+	.h2
+		text-align: left
+		.lowercase
+			display: block
+	&_body
+		display: flex
+		align-items: flex-start
+		&__expet-block
+				display: flex
+				margin: 30px 30px 0 0
+				flex:  6
+		&__form-block
+			flex:  4
+		.ul-check
+			li
+				font-size: 13px
+				font-weight: 400
+				margin-bottom: 15px
+	
+
+
+.expet-block
+	&_foto
+		padding-right:  30px
+	&_body
+		display: flex
+		flex-flow: column nowrap
+		align-content: space-between
+	&__name
+		font-size: 16px
+		font-weight: 600
+	&__position
+		font-size: 12px
+		font-weight: 400
+	&__list
+		margin-top: 30px
+		padding-left: 20px
+		
+// End price-pool_section
+
+
+
+
+
+// Start services
+.services
+	padding: 30px 0
+	margin-bottom: 60px
+	&_slide
+		display: flex
+		&__img
+			flex: 0 1 auto
+			margin-right: 30px
+		&_content
+			flex: 0 1 auto
+			padding: 0 30px
+			&__counter
+				color: darken($grey, 15%)
+				font-size: 16px
+				margin-bottom: 10px
+				&-accent
+					color: $accent
+					font-size: 26px
+			&__header
+				text-transform: uppercase
+				font-weight: 600
+				margin-bottom: 30px
+	&_gallery-thumbs
+		&__item
+			background: $grey
+			height: 30px
+			padding: 10px 0 8px
+			text-align: center
+			font-size: 12px
+			margin: 0 20px
+			cursor: pointer
+			position: relative
+			line-height: 14px
+			&:after
+				position: absolute
+				content: ''
+				width: 40px
+				height: 20px
+				background: url(../images/icon/arow-middle.png) center no-repeat
+				right: -40px
+				top: 15px
+				font-size: 60px
+				z-index: 10
+				&:last-child
+					&:after
+					display: none
+	
+					
+		
+	.swiper-slide-thumb-active
+		.services_gallery-thumbs__item
+			background: #fff
+			border: 1px solid $accent
+			font-weight: 400
+			font-size: 12px
+			&:after
+				background: url(../images/icon/arow-accent.png) center no-repeat
+		.accent
+			font-weight: 600
+			color: $accent
+	
+	.last-child
+		&:after
+			display: none
+			
+	.ul-check
+		font-size: 12px
+	.accent
+		display: block
+		font-weight: 200
+		color: $text
+// End services
+
+
+
+
+
+// Start consultation
+.consultation
+	padding: 60px 0
+	background: url(../images/bg-consultation.jpg) no-repeat
+	background-size: cover
+	margin-bottom: 60px
+	.h2
+		text-align: left
+	&_body
+		display: flex
+		margin: 60px 0
+	&_asaid
+		flex: 3
+		&_item
+			display: flex
+			margin-right: 15px
+			margin-bottom: 30px
+			filter: opacity(0.5)
+			transition: all 0.4s
+			cursor: pointer
+			&__active
+				filter: opacity(1)
+			&__img
+				width: 60px
+				height: 60px
+				object-fit: cover
+				margin-right: 15px
+			&__name
+				font-size: 12px
+				font-weight: 600
+				text-transform: uppercase
+				&-little
+					font-weight: 200
+					text-transform: none
+	&_content
+		flex: 9
+		margin-left: 30px
+	&__form-block
+		max-width: 520px
+		margin-left: 30px
+		display: none
+		&__active
+			display: block
+	
+	.form-block
+		text-align: left
+		&__trigon
+			padding: 40px 20px 40px 40px
+			&:after
+				border-right: 37px solid #f5f9fa
+		&__name
+			font-size: 16px
+			text-align: left
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 15px
+			&-little
+				text-transform: capitalize
+				font-weight: 200
+				font-size: 12px
+				margin-top: 10px
+		&_body
+			display: flex
+			margin: 45px 0
+		&__old
+			font-weight: 600
+			text-align: center
+			margin-right: 15px
+			margin-top: 10px
+			&-int
+				font-weight: 400
+				font-size: 60px
+				display: block
+				margin: 0
+				line-height: 40px
+		&__text
+			font-size: 12px
+			font-weight: 400
+			max-width: 200px
+		&__foto
+			position: absolute
+			top: -15%
+			right: -15%
+			img
+				width: 240px
+				height: 260px
+				object-fit: cover
+	
+	.btn_input
+		width: 200px
+		
+// End consultation
+
+
+// Start benefits
+.benefits
+	padding: 30px 0
+	font-size: 12px
+	margin-bottom: 60px
+	&_item
+		margin: 30px 0
+		text-align: center
+		padding: 0 15px
+		font-weight: 400
+		&__img
+			margin-bottom: 15px
+			svg
+				width: 50px
+				height: 50px
+				fill: $accent
+		&__header
+			font-weight: 700
+			text-transform: uppercase
+	
+// End benefits
+
+
+
+
+
+
+
+// Start beton
+.beton
+	color: #fff
+	background: url(../images/bg-beton.jpg)
+	background-size: cover
+	padding: 60px 0
+	.h2
+		text-align: left
+	
+// End beton
+
+
+
+
+// Custom settings		
+.lowercase
+	text-transform: lowercase
+	display: block
+.accent-text
+	color: $accent
+	
+.title-block
+	border-bottom: 1px solid $accent
+	transition: all 0.4s
+	cursor: pointer
+	position: relative
+	&:hover
+		color: $accent
+		.title-block__data-title
+			display: block
+	&__data-title
+		display: none
+		color: $text
+		position: absolute
+		min-width: 60px
+		content: 'Авоматизация оборудования'
+		left: 0
+		background: #fff
+		border: 1px solid $accent
+		z-index: 10
+		padding: 5px 15px
+		white-space: pre
+
+.accent
+	color: $accent
+	font-weight: 600
+// media
+@import media

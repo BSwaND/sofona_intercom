@@ -1,0 +1,138 @@
+@import vars
+
+input
+	height: 45px
+	width: 220px
+	padding: 0 15px
+	color: $text-input
+	font-size: 12px
+	border: none
+	margin-right: 10px
+	margin-bottom: 10px
+
+input[type=submit]
+	background: $accent
+	font-size: 15px
+	color: $text
+	font-weight: 600
+	width: 170px
+	
+	
+.btn
+	transition: all 0.4s
+	display: inline-block
+	height: 45px
+	text-align: center
+	padding: 0px 15px
+	color: $text
+	font-weight: 600
+	background: $grey
+	min-width: 135px
+	line-height: 45px
+	font-size: 14px
+	&:hover
+		background: lighten($accent, 10%)
+		text-decoration: none
+		color: lighten($text, 15%)
+	&_accent
+		background: $accent
+	
+// Star swiper
+.swiper
+	&-button
+		&-prev,
+		&-next
+			height: 33px
+			width: 40px
+			display: inline-block
+			position: absolute
+			z-index: 100
+			top: 50%
+			cursor: pointer
+			transform: translateY(-50%)
+		&-prev
+			background: url(../images/icon/arrow-left.png) no-repeat center
+			left: 0
+		&-next
+			background: url(../images/icon/arrow-rigth.png) no-repeat center
+			right: 0
+	&-pagination-bullet
+		height: 3px
+		width: 35px
+		border-radius: 0
+		background: $accent
+
+.gallery-thumbs
+	margin-bottom: 60px
+	margin-top: 30px
+	
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after
+	display: none
+	
+// End swiper
+
+
+
+
+// Start form block
+.form-block
+
+.main-screen__form
+
+.price-pool
+	.form-block
+		margin: 0 30px
+		&__header
+			font-weight: 400
+			font-size: 16px
+		&__input-text
+			background: $bg-input
+		input
+			width: 100%
+
+.form-block__trigon
+	border: 3px solid $accent
+	padding: 40px
+	text-align: center
+	position: relative
+	&:after,
+	&:before
+		position: absolute
+		content: ''
+		top: 40px
+		left: -80px
+	&:before
+		border: 40px solid transparent
+		border-right: 40px solid $accent
+	&:after
+		border: 37px solid transparent
+		border-right: 37px solid #fff
+		left: -73px
+		top: 43px
+
+// End form block
+
+
+
+// Start ul style
+.ul-check
+	padding-left: 25px
+	font-weight: 400
+	li
+		display: block
+		position: relative
+		margin-bottom: 10px
+		&:before
+			background-image: url(../images/icon/ok.svg)
+			background-size: contain
+			background-repeat: no-repeat
+			width: 15px
+			position: absolute
+			height: 100%
+			content: ''
+			display: block
+			left: -25px
+// End ul style
