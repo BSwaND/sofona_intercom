@@ -443,10 +443,88 @@ h1,.h1, h2, .h2, h3, .h3
 	background: url(../images/bg-beton.jpg)
 	background-size: cover
 	padding: 60px 0
+	margin-bottom: 60px
 	.h2
 		text-align: left
-	
+	&_body
+		margin-top: 60px
+	&_item
+		display: flex
+		font-weight: 400
+		font-size: 16px
+		margin-bottom: 30px
+		&_text
+			flex: 6
+			padding-right: 60px
+			position: relative
+			&:after
+				content: ''
+				background: url(../images/icon/arow-accent.png) no-repeat center
+				//background-size: cover
+				position: absolute
+				top: 5px
+				right: 0
+				z-index: 10
+				width: 60px
+				height: 30px
+		&_profit
+			flex: 6
+			margin-left: 15px
+			color: $accent
+
+
+	.form-block
+		margin-left: 60px
+		height: 300px
+
 // End beton
+
+
+
+
+// Star command
+.command
+	padding: 60px 0
+	text-align: center
+	&_flex
+		display: flex
+	&_item
+		margin:  15px
+		cursor: pointer
+		transition: all 0.4s
+		position: relative
+		flex: auto
+		&_img
+			border: 1px solid $accent
+			padding: 5px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&_content
+			font-size: 13px
+			font-weight: 400
+			display: block
+			position: absolute
+			width: calc(100% - 10px)
+			height: calc(100% - 10px)
+			top: 5px
+			left: 5px
+			padding: 60px 5px 0
+			background: transparentize($accent, .2)
+			color: #fff
+			opacity: 0
+			transition: all 0.4s
+			text-shadow: 0 0 10px rgba(0,0,0, .5 )
+			&:hover
+				opacity: 1
+		&__header
+			text-transform: uppercase
+			margin-bottom: 10px
+
+	.h2
+		margin-bottom: 30px
+// End command
 
 
 
