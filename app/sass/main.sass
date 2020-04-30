@@ -97,7 +97,7 @@ h1,.h1, h2, .h2, h3, .h3
 	&__gallery-thumbs
 		width: 300px
 		position: absolute
-		top: 30%
+		top: 25%
 		left: 65%
 	&__container
 			position: relative
@@ -116,9 +116,12 @@ h1,.h1, h2, .h2, h3, .h3
 					font-size: 12px
 					display: flex
 					cursor: pointer
+					&:first-child
+						svg
+							transform: translateY(-10px)
 				&__text
 					padding-right: 15px
-	
+
 				&__img
 					flex: 90px
 					svg
@@ -222,11 +225,15 @@ h1,.h1, h2, .h2, h3, .h3
 				font-weight: 400
 				margin-bottom: 15px
 	
-
+	.form-block
+		text-align: left
 
 .expet-block
 	&_foto
 		padding-right:  30px
+		width: 195px
+		height: 195px
+		object-fit: cover
 	&_body
 		display: flex
 		flex-flow: column nowrap
