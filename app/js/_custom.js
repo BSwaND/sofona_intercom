@@ -150,6 +150,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		jQuery('#'+atrBlock).addClass('consultation__form-block__active');
 	})
 
+
+
+	// Start fixed header menu
+	window.onscroll = function (e) {
+		var scrolClient = window.scrollY,
+			blockMenu = document.querySelector('.header'),
+			classFixedMenu = "headhesive--stick";
+		if (scrolClient > 200){
+			blockMenu.classList.add(classFixedMenu);
+		} else {
+			blockMenu.classList.remove(classFixedMenu);
+		}
+	};
+	// End fixed header menu
+
+
+
 });
 
 

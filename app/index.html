@@ -22,14 +22,15 @@
 				<div class="col-4 col-md-2">
 					<div class="header_logo_blok">
 						<img src="images/logo.png" alt="logo" class="logo_img">
+						<img src="images/logo_color.png" alt="logo" class="logo_img__color">
 					</div>
 				</div>
 				<div class="col-md-6 d-none d-md-block ">
 					<ul class="nav menu">
-						<li><a href="#">Работы</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Преимущества</a></li>
-						<li><a href="#">Команда</a></li>
+						<li><a href="#work">Работы</a></li>
+						<li><a href="#services">Услуги</a></li>
+						<li><a href="#profit">Преимущества</a></li>
+						<li><a href="#command">Команда</a></li>
 					</ul>
 				</div>
 				<div class="col-8 col-md-4">
@@ -59,7 +60,7 @@
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
 									<form action="">
 										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+										<input type="submit" class="btn btn_input" value="Узнать стоимость">
 									</form>
 								</div>
 
@@ -84,7 +85,7 @@
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
 									<form action="">
 										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+										<input type="submit" class="btn btn_input" value="Узнать стоимость">
 									</form>
 								</div>
 
@@ -109,7 +110,7 @@
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
 									<form action="">
 										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+										<input type="submit" class="btn btn_input" value="Узнать стоимость">
 									</form>
 								</div>
 
@@ -312,7 +313,7 @@ c47 0 85 -3 85 -8z"/>
 </div>
 
 
-<div class="gallery-works_section">
+<div id="work" class="gallery-works_section">
 	<div class="container">
 		<h2 class="h2">Галерея наших работ</h2>
 		<div class="swiper-container gallery-works__swiper-container">
@@ -431,7 +432,7 @@ c47 0 85 -3 85 -8z"/>
 							<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
 							<form action="">
 								<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-								<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+								<input type="submit" class="btn btn_input" value="Узнать стоимость">
 							</form>
 						</div>
 					</div>
@@ -442,7 +443,7 @@ c47 0 85 -3 85 -8z"/>
 </div>
 
 
-<div class="services">
+<div id="services" class="services">
 	<div class="container">
 		<h2 class="h2">Полный комплекс услуг <span class="lowercase">от проекта до его сдачи в эксплуатацию:</span></h2>
 		<div class="swiper-container services_swiper-container">
@@ -646,7 +647,7 @@ c47 0 85 -3 85 -8z"/>
 </div>
 
 
-<div class="benefits">
+<div id="profit" class="benefits">
 	<div class="container">
 		<h2 class="h2">Преимущества и плюсы <br>работы с нами </h2>
 		<div class="row">
@@ -933,7 +934,7 @@ c47 0 85 -3 85 -8z"/>
 							<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
 							<form action="">
 								<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-								<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+								<input type="submit" class="btn btn_input" value="Узнать стоимость">
 							</form>
 						</div>
 					</div>
@@ -945,7 +946,7 @@ c47 0 85 -3 85 -8z"/>
 </div>
 
 
-<div class="command">
+<div id="command" class="command">
 	<div class="container">
 		<h2 class="h2">КОМАНДА INTERCOM</h2>
 		<div class="command_flex">
@@ -1101,7 +1102,7 @@ c47 0 85 -3 85 -8z"/>
 					<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
 					<form action="">
 						<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-						<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+						<input type="submit" class="btn btn_input" value="Узнать стоимость">
 					</form>
 				</div>
 			</div>
@@ -1219,27 +1220,52 @@ c47 0 85 -3 85 -8z"/>
 
 
 
-<div id="info-modal" class="mfp-hide white-popup-block">
+<div id="info-modal" class="mfp-hide ">
 	<p><a class="popup-modal-dismiss" href="#">X</a></p>
 	<h2 class="h2">закажите профессиональное проектирование бассейна</h2>
-	<p>И получите готовый проект за 14 дней, с точной сметой — без переплат!</p>
+	<p>И получите готовый проект за 14 дней, <br> с точной сметой — без переплат!</p>
+
+	<div class="mfp_list-ul">
+		<ul class="ul-check">
+			<li>22 года на рынке</li>
+			<li>Персональные 	менеджеры эксперты	с опытом  более 10 лет</li>
+			<li>Подготовили более 500 проектов бетонных бассейнов</li>
+		</ul>
+	</div>
 
 
 	<div class="form-block">
-		<p>Получите лучшую цену на проектирование бассейна</p>
+		<p class="form-block__header">Получите лучшую цену на проектирование бассейна</p>
 		<form action="">
 			<input type="text" placeholder="+380 97 777 77 77" required="">
-			<input type="submit" class="btn btn_input" value="Узнать стоимсость">
+			<input type="submit" class="btn btn_input" value="Получить просчет">
 		</form>
 	</div>
 </div>
-<!--///////////////-->
+
+
 <div id="form-modal" class="mfp-hide white-popup-block">
 	<p><a class="popup-modal-dismiss" href="#">X</a></p>
-	<h1>FORMMMMMMM, Modal dialog</h1>
-	<p>You won't be able to dismiss this by usual means (escape or
-		click button), but you can close it programatically based on
-		user choices or actions.</p>
+	<h2 class="h2">Профессиональное проектирование <br>
+		БЕТОННОГО! бассейна</h2>
+	<p>Оставьте номер телефона, чтобы получить:</p>
+
+	<div class="mfp_list-ul">
+		<ul class="ul-check">
+			<li>Предварительный просчет — 1 день</li>
+			<li>Точный расчет сметы — от 4 дней	</li>
+			<li>Готовый проект — от 14 дней</li>
+		</ul>
+	</div>
+
+
+	<div class="form-block">
+		<p class="form-block__header">Получите лучшую цену на проектирование бассейна</p>
+		<form action="">
+			<input type="text" placeholder="+380 97 777 77 77" required="">
+			<input type="submit" class="btn btn_input" value="Получить просчет">
+		</form>
+	</div>
 </div>
 
 
