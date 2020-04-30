@@ -33,7 +33,7 @@ input[type=submit]
 	&:hover
 		background: lighten($accent, 10%)
 		text-decoration: none
-		color: lighten($text, 15%)
+		color: #fff
 	&_accent
 		background: $accent
 	
@@ -43,7 +43,7 @@ input[type=submit]
 		&-prev,
 		&-next
 			height: 33px
-			width: 40px
+
 			display: inline-block
 			position: absolute
 			z-index: 100
@@ -136,3 +136,26 @@ input[type=submit]
 			display: block
 			left: -25px
 // End ul style
+
+
+
+
+// Star magnifik popap
+.mfp
+	&-bg
+		background: $bg-modal
+	&-content
+		background: #fff
+		max-width: 600px
+		padding: 30px
+		margin: auto
+		min-height: 400px
+		border-radius: 1px
+		position: relative
+		
+.popup-modal-dismiss
+	position: absolute
+	right: 20px
+	top: 20px
+	color: $text
+// End magnifik popap

@@ -9,9 +9,38 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.main-screen
+		&__gallery-thumbs
+			width: 250px
+			left: 72%
 			
 // ≥992px
 +media-breakpoint-down(md)
+	.main-screen__gallery-thumbs,
+	.services_slide__img
+		display: none !important
+		
+	.gallery-works__swiper-container
+		.swiper-slide
+			height: 100%
+			
+	.price-pool_body
+		display: block
+		&__expet-block
+			margin: 0
+			margin-bottom: 30px
+		
+	.consultation
+		.form-block__foto
+			right: -15px
+			img
+				width: 200px
+				height: 200px
+	.gallery-works-pull__swiper-container
+		.swiper-slide:nth-child(n)
+			height: 100%
+			
+
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -32,14 +61,78 @@
 
 			
 	.form-block__foto,
-	.gallery-thumbs
+	.gallery-thumbs,
+	.main-screen__gallery-thumbs
 		display: none
+
 		
 	.consultation_content,
 	.consultation__form-block
 		margin: 0px
+		
+	.map
+		width: 100%
+		height: auto
+		top: 100px
+
+
 // ≥576px
 +media-breakpoint-down(xs)
+	.swiper-button-prev,
+	.swiper-button-next,
+	.command,
+	.gallery-works-pull
+			display: none !important
+			
+	.main-screen
+		&__swiper-container
+			.swiper-slide
+				&_body
+					height: 680px
+					padding-right: 20px
+					&_inner
+						padding-top: 60px !important
+		input
+			width: calc(100% - 30px) !important
+			display: block
+			margin:  15px auto
+		.form-block
+			margin-top: 20px
+			
+
+	.gallery-works__swiper-container
+		height: 220px
+		//padding-bottom: 0
+		.swiper-slide
+			height: 100%
+
+	.beton .form-block
+			margin-left: 0
+		
+	.price-pool .form-block
+		margin: 0 !important
+		
+	.nav
+		display: none
+		padding-left: 0
+		
+	.services_slide_footer
+		margin-top: 30px
+		.btn
+			width: 200px
+			margin: 10px 0
+			
+	.beton
+		margin-bottom: 0
+		&_body
+			input
+				width: 200px !important
+				
+		&-price
+			.form-block
+				margin-left: 0
+			input
+				width: 210px !important
 
 /*==========  Mobile First  ==========*/
 

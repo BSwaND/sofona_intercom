@@ -72,13 +72,13 @@ h1,.h1, h2, .h2, h3, .h3
 		text-align: right
 		margin-top: 15px
 		font-size: 18px
-			
+		
 	
 .main-screen
 	margin-bottom: 60px
+	position: relative
 	&__swiper-container
 		color: #fff
-		display: flex
 		.swiper
 			&-slide
 				&_body
@@ -91,31 +91,13 @@ h1,.h1, h2, .h2, h3, .h3
 						padding-top: 120px
 						font-size: 18px
 						font-weight: 500
-					
-					&_content
-						flex:  9
-					&_asaid
-						flex:  3
-						font-size: 12px
-						margin-left: 30px
-						&__item
-							display: flex
-							margin-bottom: 30px
-							line-height: 14px
-							font-weight: 400
-							&__active
-								color: $accent
-								font-size: 14px
-								.swiper-slide_body_asaid__img
-									fill: $accent
-						&__text
-							flex: 0  1 200px
-							text-align: right
-							padding: 0 15px
-						&__img
-							fill: #fff
-							flex:  0 1 60px
-							height: 60px
+	&__gallery-thumbs
+		width: 300px
+		position: absolute
+		top: 30%
+		left: 65%
+	&__container
+			position: relative
 	&__header
 		font-size: 32px
 		margin-bottom: 15px
@@ -123,16 +105,40 @@ h1,.h1, h2, .h2, h3, .h3
 			font-weight: 600
 			display: block
 			text-transform: uppercase
-		
+	
+	.swiper-slide
+		&_body
+			&_asaid
+				&__item
+					font-size: 12px
+					display: flex
+					cursor: pointer
+				&__text
+					padding-right: 15px
+	
+				&__img
+					flex: 90px
+					svg
+						fill: #fff
+		&-thumb
+			&-active
+				svg
+					fill: $accent !important
+				.swiper-slide_body_asaid__text
+					font-size: 13px
+					font-weight: 400
+					color: $accent
+
+	
 	.form-block
 		margin-top: 45px
 	
 // End main-screen
-		
-		
-		
-		
-		
+
+
+
+
+
 // Start gallery-works_section
 .gallery-works
 	&_section
@@ -180,6 +186,7 @@ h1,.h1, h2, .h2, h3, .h3
 					filter: invert(1)
 					background-size: contain
 					background-repeat: no-repeat
+					background-position: center
 				.gallery-works__play
 					background-image: url(../images/icon/play.svg)
 				.gallery-works__foto
@@ -187,9 +194,9 @@ h1,.h1, h2, .h2, h3, .h3
 
 // End gallery-works_section
 
-	
-	
-	
+
+
+
 // Start price-pool_section | expet-block
 .price-pool
 	margin-bottom: 60px
@@ -405,7 +412,25 @@ h1,.h1, h2, .h2, h3, .h3
 	
 	.btn_input
 		width: 200px
-		
+
+#consultation-1
+	&.form-block__trigon
+		&:before
+			top: 0px
+		&:after
+			top: 3px
+#consultation-2
+	&.form-block__trigon
+		&:before
+			top: 80px
+		&:after
+			top: 83px
+#consultation-3
+	&.form-block__trigon
+		&:before
+			top: 180px
+		&:after
+			top: 183px
 // End consultation
 
 
@@ -433,7 +458,65 @@ h1,.h1, h2, .h2, h3, .h3
 
 
 
+// Start gallery-works-pull
+.gallery-works-pull
+	.swiper-slide
+		background-size: cover
+	.gallery-works-pull__swiper-container
+		//padding: 0 60px
+		height: 420px
+		margin: 30px 0px 0
+	.swiper-slide
+		margin-top: 15px
+		&:nth-child(1),
+		&:nth-child(6),
+		&:nth-child(11)
+			height: calc(100% - 15px)
+		&:nth-child(2),
+		&:nth-child(7),
+		&:nth-child(12)
+			height: calc(30% - 15px)
+		&:nth-child(3),
+		&:nth-child(8),
+		&:nth-child(13)
+			height: calc(66% - 0px)
+		&:nth-child(4),
+		&:nth-child(9),
+		&:nth-child(14)
+			height: calc(66% - 15px)
+		&:nth-child(5),
+		&:nth-child(10),
+		&:nth-child(15)
+			height: calc(30% - 0px)
+// End gallery-works-pull
 
+
+
+// Start video-works
+.video-works
+	margin: auto 60px
+	text-align: center
+	&_block
+		max-width: 350px
+		margin: 90px auto 60px
+		display: inline-block
+	&_title
+		display: inline-block
+		width: 120px
+		font-size: 12px
+		margin-right: 30px
+		text-align: left
+		font-weight: 400
+	.form-block
+		padding: 20px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all 0.4s
+			&:hover
+				box-shadow: 0 0 10px 0 lighten($text, 50%)
+// End  video-works
 
 
 
@@ -476,6 +559,8 @@ h1,.h1, h2, .h2, h3, .h3
 	.form-block
 		margin-left: 60px
 		height: 300px
+		&__trigon:after
+			display: none
 
 // End beton
 
@@ -528,8 +613,172 @@ h1,.h1, h2, .h2, h3, .h3
 
 
 
+// Star beton-price
+.beton-price
+	background: url(../images/bg-3.jpg) no-repeat
+	background-size: cover
+	color: #fff
+	padding: 90px 0
+	margin-bottom: 60px
+	&_descript
+		width: 300px
+		margin: 30px 0
+	.h2
+		text-align: left
+	.form-block
+		text-align: left
+		margin-left: 30px
+		&__trigon:after
+			display: none
+		
+// End beton-price
 
-// Custom settings		
+
+
+// Star certificate
+.certificate
+	padding: 30px 0
+	text-align: center
+	&_swiper-container
+		margin-top: 60px
+		height: 360px
+	&_slide
+		&_title
+			text-align: center
+			font-weight: 400
+			font-size: 12px
+			margin: 15px 0
+			padding: 0 30px
+
+// End certificate
+
+
+
+
+// Star video-gallery
+.video-gallery
+	margin: 60px 0
+	&_item
+		display: block
+		position: relative
+		transition: all 0.4s
+		&:after
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background-image: url(../images/icon/play.svg)
+			background-repeat: no-repeat
+			background-size: 30%
+			background-position: center
+			filter: invert(1)
+		&:hover
+			box-shadow: 0 0 10px 0 rgba(0,0,0, .5 )
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+	&_link
+		margin-top: 60px
+		color: $accent
+		font-weight: 600
+		font-size: 13px
+		border-bottom: 1px solid $accent
+		&:hover
+			text-decoration: none
+			color: lighten($accent, 15%)
+	.h2
+		text-align: left
+		
+
+// End video-gallery
+
+
+
+
+
+
+// Star footer
+.footer
+	&_sub
+		background: url(../images/bg-footer.jpg) no-repeat
+		background-size: cover
+		height:  500px
+		position: relative
+	&_end
+		font-size: 12px
+		height: 280px
+		background: rgb(248,251,250)
+		background: linear-gradient(156deg, rgba(248,251,250,1) 0%, rgba(228,241,255,1) 70%)
+		padding: 180px 0 0
+		a
+			color: $text
+	
+	
+	.copirate
+		padding-top: 20px
+// End footer
+
+
+
+
+// Star map_block
+.map
+	position: absolute
+	height: 330px
+	width: 800px
+	background: #fff
+	top: 300px
+	left:  50%
+	transform: translateX(-50%)
+	display: flex
+	flex-flow: row wrap
+	&_header
+		text-align: left
+		font-size: 22px
+		font-weight: 600
+		text-transform: uppercase
+		margin-top: 30px
+		margin-bottom: 30px
+	&_img
+		height: 100%
+		width: 100%
+		object-fit: cover
+		flex: 7
+	&_content
+		padding: 30px 40px
+		text-align: left
+		flex: 5
+	&_tel
+		font-weight: 600
+		margin-bottom: 20px
+	&_address
+		font-weight: 400
+		font-size: 12px
+	
+	&_tel,
+	&_address
+		position: relative
+		margin-left: 30px
+		&:before
+			content: ''
+			width: 20px
+			height: 15px
+			display: inline-block
+			margin-right: 5px
+			position: absolute
+			left: -30px
+	&_tel:before
+		background: url(../images/icon/call.svg) no-repeat
+	&_address:before
+		background: url(../images/icon/maps-and-flags.svg) no-repeat
+// End map_block
+
+
+
+// Custom settings
 .lowercase
 	text-transform: lowercase
 	display: block
