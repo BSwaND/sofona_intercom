@@ -118,6 +118,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+
+	// Start передвижка кнопок слайдера
+	jQuery('.gallery-works_section .swiper_container-navigation').parent().after($('.gallery-works_section .swiper_container-navigation'));
+	jQuery('.services .swiper_container-navigation').parent().after($('.services .swiper_container-navigation'));
+	jQuery('.gallery-works-pull .swiper_container-navigation').parent().after($('.gallery-works-pull .swiper_container-navigation'));
+	jQuery('.gallery-works-pull .swiper-pagination').parent().after($('.gallery-works-pull .swiper-pagination'));
+	jQuery('.certificate .swiper_container-navigation').parent().after($('.certificate .swiper_container-navigation'));
+
+	// End передвижка кнопок слайдера
+
 	jQuery('.image-popup-vertical-fit').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
@@ -140,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		jQuery.magnificPopup.close();
 	});
 
-
 	jQuery('.consultation_asaid_item').click(function () {
 		let atrBlock = jQuery(this).attr('data-consultation');
 
@@ -148,8 +157,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		jQuery(this).addClass('consultation_asaid_item__active');
 		jQuery('.consultation__form-block').removeClass('consultation__form-block__active');
 		jQuery('#'+atrBlock).addClass('consultation__form-block__active');
-	})
+	});
 
+	jQuery('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
 
 
 	// Start fixed header menu

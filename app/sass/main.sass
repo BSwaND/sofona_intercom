@@ -109,31 +109,37 @@ h1,.h1, h2, .h2, h3, .h3
 			display: block
 			text-transform: uppercase
 	
-	.swiper-slide
-		&_body
-			&_asaid
-				&__item
-					font-size: 12px
-					display: flex
-					cursor: pointer
-					&:first-child
+	.swiper
+		&-slide
+			&_body
+				&_asaid
+					&__item
+						font-size: 12px
+						display: flex
+						cursor: pointer
+						&:first-child
+							svg
+								transform: translateY(-10px)
+					&__text
+						padding-right: 15px
+	
+					&__img
+						flex: 90px
 						svg
-							transform: translateY(-10px)
-				&__text
-					padding-right: 15px
-
-				&__img
-					flex: 90px
+							fill: #fff
+			&-thumb
+				&-active
 					svg
-						fill: #fff
-		&-thumb
-			&-active
-				svg
-					fill: $accent !important
-				.swiper-slide_body_asaid__text
-					font-size: 13px
-					font-weight: 400
-					color: $accent
+						fill: $accent !important
+					.swiper-slide_body_asaid__text
+						font-size: 13px
+						font-weight: 400
+						color: $accent
+		&_container-navigation
+			left: 20px
+			right: 0
+			max-width: 1300px
+			margin: auto
 
 	
 	.form-block
@@ -149,6 +155,8 @@ h1,.h1, h2, .h2, h3, .h3
 .gallery-works
 	&_section
 		padding: 20px 0
+		.container:first-child
+			position: relative
 	&__swiper-container
 		margin: 60px 0
 		height: 580px
@@ -258,6 +266,8 @@ h1,.h1, h2, .h2, h3, .h3
 .services
 	padding: 30px 0
 	margin-bottom: 60px
+	.container:first-child
+		position: relative
 	&_slide
 		display: flex
 		&__img
@@ -303,7 +313,8 @@ h1,.h1, h2, .h2, h3, .h3
 					display: none
 	
 					
-		
+	.swiper_container-navigation
+		top: 65%
 	.swiper-slide-thumb-active
 		.services_gallery-thumbs__item
 			background: #fff
@@ -470,6 +481,8 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Start gallery-works-pull
 .gallery-works-pull
+	.container:first-child
+		position: relative
 	.swiper-slide
 		background-size: cover
 	.gallery-works-pull__swiper-container
@@ -478,26 +491,35 @@ h1,.h1, h2, .h2, h3, .h3
 		margin: 30px 0px 0
 	.swiper-slide
 		margin-top: 15px
-		&:nth-child(1),
-		&:nth-child(6),
-		&:nth-child(11)
+		&:nth-child(1),		&:nth-child(6),
+		&:nth-child(11), 	&:nth-child(16),
+		&:nth-child(21), 	&:nth-child(26)
 			height: calc(100% - 15px)
-		&:nth-child(2),
-		&:nth-child(7),
-		&:nth-child(12)
+		&:nth-child(2),		&:nth-child(7),
+		&:nth-child(12),	&:nth-child(17),
+		&:nth-child(22),	&:nth-child(27)
 			height: calc(30% - 15px)
-		&:nth-child(3),
-		&:nth-child(8),
-		&:nth-child(13)
+		&:nth-child(3),		&:nth-child(8),
+		&:nth-child(13),	&:nth-child(18),
+		&:nth-child(23),	&:nth-child(28)
 			height: calc(66% - 0px)
-		&:nth-child(4),
-		&:nth-child(9),
-		&:nth-child(14)
+		&:nth-child(4),		&:nth-child(9),
+		&:nth-child(14),	&:nth-child(19),
+		&:nth-child(24),	&:nth-child(29)
 			height: calc(66% - 15px)
-		&:nth-child(5),
-		&:nth-child(10),
-		&:nth-child(15)
+		&:nth-child(5),		&:nth-child(10),
+		&:nth-child(15),	&:nth-child(20),
+		&:nth-child(25),	&:nth-child(30)
 			height: calc(30% - 0px)
+			
+	.swiper_container-navigation
+		top: 37%
+	.swiper-pagination
+		margin: 15px auto
+		text-align: center
+		width: 100%
+		&-bullet
+			margin-right: 5px
 // End gallery-works-pull
 
 
@@ -568,9 +590,20 @@ h1,.h1, h2, .h2, h3, .h3
 
 	.form-block
 		margin-left: 60px
-		height: 300px
-		&__trigon:after
+		height: 310px
+		border: none
+		background: url(../images/bg-form-1.png) no-repeat
+		padding-right: 50px
+		padding-left: 80px
+		padding-top: 50px
+		text-align: left
+		&__trigon:after,
+		&__trigon:before
 			display: none
+		&__header
+			margin-bottom: 30px
+		input
+			width: calc(100% - 60px) !important
 
 // End beton
 
@@ -641,6 +674,17 @@ h1,.h1, h2, .h2, h3, .h3
 		&__trigon:after
 			display: none
 		
+	.form-block
+		background: url(../images/bg-form-2.png) no-repeat
+		border: none
+		padding: 40px 60px
+		&:after,
+		&:before
+			display: none
+		input
+			width: 45% !important
+			display: inline-block !important
+			
 // End beton-price
 
 
@@ -649,6 +693,8 @@ h1,.h1, h2, .h2, h3, .h3
 .certificate
 	padding: 30px 0
 	text-align: center
+	.container:first-child
+		position: relative
 	&_swiper-container
 		margin-top: 60px
 		height: 360px
@@ -719,7 +765,7 @@ h1,.h1, h2, .h2, h3, .h3
 		position: relative
 	&_end
 		font-size: 12px
-		height: 280px
+		min-height: 280px
 		background: rgb(248,251,250)
 		background: linear-gradient(156deg, rgba(248,251,250,1) 0%, rgba(228,241,255,1) 70%)
 		padding: 180px 0 0

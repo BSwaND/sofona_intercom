@@ -11,6 +11,7 @@
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 
+	<link rel="stylesheet" href="css/uform-style.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
@@ -58,9 +59,15 @@
 
 								<div class="form-block main-screen__form">
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
-									<form action="">
-										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимость">
+
+									<form action="" id="uForm" class="uForm" method="post">
+										<input id="uForm__hidden" name="name-form" type="hidden" value="Форма гланого экрана">
+										<input id="uForm__tel" name="tel" placeholder="+38 097 777 77 77" required>
+										<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+										<input id="uForm__submit" name="submit" type="submit" class="btn btn_input"
+													 value="Узнать стоимость">
+										<p id="uForm__error-msg" class="uForm__error-msg"></p>
+										<div id="uForm__preload" class="uForm__preload"></div>
 									</form>
 								</div>
 
@@ -83,9 +90,15 @@
 
 								<div class="form-block main-screen__form">
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
-									<form action="">
-										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимость">
+
+									<form action="" id="uForm_2" class="uForm" method="post">
+										<input id="uForm__hidden_2" name="name-form" type="hidden" value="Форма гланого экрана">
+										<input id="uForm__tel_2" name="tel" placeholder="+38 097 777 77 77" required>
+										<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+										<input id="uForm__submit_2" name="submit" type="submit" class="btn btn_input"
+													 value="Узнать стоимость">
+										<p id="uForm__error-msg_2" class="uForm__error-msg"></p>
+										<div id="uForm__preload_2" class="uForm__preload"></div>
 									</form>
 								</div>
 
@@ -108,9 +121,15 @@
 
 								<div class="form-block main-screen__form">
 									<p>Узнайте стоимость вашего бетонного бассейна</p>
-									<form action="">
-										<input type="text" placeholder="+380 97 777 77 77" required>
-										<input type="submit" class="btn btn_input" value="Узнать стоимость">
+
+									<form action="" id="uForm_3" class="uForm" method="post">
+										<input id="uForm__hidden_3" name="name-form" type="hidden" value="Форма гланого экрана">
+										<input id="uForm__tel_3" name="tel" placeholder="+38 097 777 77 77" required>
+										<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+										<input id="uForm__submit_3" name="submit" type="submit" class="btn btn_input"
+													 value="Узнать стоимость">
+										<p id="uForm__error-msg_3" class="uForm__error-msg"></p>
+										<div id="uForm__preload_3" class="uForm__preload"></div>
 									</form>
 								</div>
 
@@ -316,82 +335,171 @@ c47 0 85 -3 85 -8z"/>
 <div id="work" class="gallery-works_section">
 	<div class="container">
 		<h2 class="h2">Галерея наших работ</h2>
+
+
 		<div class="swiper-container gallery-works__swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/main-screen-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-1.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-1.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/main-screen-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/main-screen-2.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-2.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-2.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/main-screen-3.jpg" title="Хочу такой басеин">
-						<span class="gallery-works__play"></span>
-					</a>
-				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-3.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-3.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
-						<span class="gallery-works__play"></span>
-					</a>
-				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-4.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-4.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-5.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-5.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-6.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-6.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-7.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-7.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-8.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-8.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-9.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-9.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-10.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-10.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-11.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-11.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
-				<div class="swiper-slide" style="background-image: url(../images/gallery-works-1.jpg)">
-					<a class="image-popup-vertical-fit" href="/images/gallery-works-1.jpg" title="Хочу такой басеин">
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-12.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-12.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-13.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-13.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-14.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-14.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-15.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-15.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-16.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-16.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-17.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-17.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-18.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-18.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-19.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-19.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-20.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-20.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-21.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-21.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-22.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-22.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-23.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-23.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-24.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-24.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-25.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-25.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-26.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-26.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-27.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-27.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-28.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-28.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-29.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-29.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-30.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-30.jpg">
+						<span class="gallery-works__foto"></span>
+					</a>
+				</div>
+				<div class="swiper-slide" style="background-image: url(/images/gallery/gallery-31.jpg)">
+					<a class="image-popup-vertical-fit" href="images/gallery/gallery-31.jpg">
 						<span class="gallery-works__foto"></span>
 					</a>
 				</div>
 			</div>
 
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper_container-navigation">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
 			<!-- Add Pagination -->
 			<div class="swiper-pagination"></div>
 		</div>
@@ -404,38 +512,48 @@ c47 0 85 -3 85 -8z"/>
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
 				<h2 class="h2">Узнайте стоимость <span class="lowercase">	вашего бетонного бассейна</span></h2>
-				<div class="price-pool_body">
-					<div class="price-pool_body__expet-block">
-						<img src="/images/Pikalov.jpg" alt="expet" class="expet-block_foto">
-						<div class="expet-block_body">
-							<div class="expet-block__name">Пикалов Игорь <br>Иванович</div>
-							<div class="expet-block__position">Эксперт</div>
-							<ul class="ul-check expet-block__list">
-								<li>
-									20+ лет опыта
-									в строительстве бассейнов
-								</li>
-								<li class="expet-block__list_item">
-									570+ успешно
-									сданных проектов
-								</li>
-								<li class="expet-block__list_item">
-									Поможет избежать ошибок
-									при выборе бассейна
-								</li>
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="price-pool_body__expet-block">
+							<img src="/images/Pikalov.jpg" alt="expet" class="expet-block_foto">
+							<div class="expet-block_body">
+								<div class="expet-block__name">Пикалов Игорь <br>Иванович</div>
+								<div class="expet-block__position">Эксперт</div>
+								<ul class="ul-check expet-block__list">
+									<li>
+										20+ лет опыта
+										в строительстве бассейнов
+									</li>
+									<li class="expet-block__list_item">
+										570+ успешно
+										сданных проектов
+									</li>
+									<li class="expet-block__list_item">
+										Поможет избежать ошибок
+										при выборе бассейна
+									</li>
 
-							</ul>
+								</ul>
+							</div>
 						</div>
 					</div>
-					<div class="price-pool_body__form-block">
-						<div class="form-block form-block__trigon">
-							<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
-							<form action="">
-								<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-								<input type="submit" class="btn btn_input" value="Узнать стоимость">
-							</form>
+					<div class="col-lg-5">
+						<div class="price-pool_body__form-block">
+							<div class="form-block form-block__trigon">
+								<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
+								<form action="" id="uForm_4" class="uForm" method="post">
+									<input id="uForm__hidden_4" name="name-form" type="hidden" value="Форма 3 экрана">
+									<input id="uForm__tel_4" name="tel" placeholder="+38 097 777 77 77" required>
+									<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+									<input id="uForm__submit_4" name="submit" type="submit" class="btn btn_input"
+												 value="Узнать стоимость">
+									<p id="uForm__error-msg_4" class="uForm__error-msg"></p>
+									<div id="uForm__preload_4" class="uForm__preload"></div>
+								</form>
+							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -500,24 +618,19 @@ c47 0 85 -3 85 -8z"/>
 				</div>
 				<div class="swiper-slide">
 					<div class="services_slide">
-						<img src="/images/services.jpg" alt="slide" class="services_slide__img">
+						<img src="/images/services-2.jpg" alt="slide" class="services_slide__img">
 						<div class="services_slide_content">
 							<div class="services_slide_content__counter"><span
 								class="services_slide_content__counter-accent">02</span>/05
 							</div>
-							<div class="services_slide_content__header">Проектируем ваш бассейн</div>
+							<div class="services_slide_content__header">Изготавливаем бетонную чашу</div>
 							<ul class="ul-check">
-								<li>Помогаем определиться с концепцией бетонного бассейна</li>
-								<li>Визуализируем бассейн в 3D или 2D</li>
-								<li>Проектируем (
-									<span class="title-block">КЖ <span
-										class="title-block__data-title">Авоматизация оборудования</span> </span>,
-									<span class="title-block">ТХ <span class="title-block__data-title">Авоматизация TХ</span> </span>,
-									<span class="title-block">ЭС <span class="title-block__data-title">Авоматизация ЭС</span> </span>,
-									<span class="title-block">АО <span class="title-block__data-title">Авоматизация ФЩ</span> </span>
-									)
+								<li>Разработка котлована
 								</li>
-								<li>Формируем смету на строительство</li>
+								<li>Устройство опалубки и вязка арматуры
+								</li>
+								<li>Бетонирование чаши</li>
+								<li>Демонтаж опалубки</li>
 							</ul>
 
 							<div class="services_slide_footer">
@@ -527,14 +640,81 @@ c47 0 85 -3 85 -8z"/>
 						</div>
 					</div>
 				</div>
-				<div class="swiper-slide"> slide - 123</div>
-				<div class="swiper-slide"> slide - 123</div>
-				<div class="swiper-slide"> slide - 123</div>
+				<div class="swiper-slide">
+					<div class="services_slide">
+						<img src="/images/services-3.jpg" alt="slide" class="services_slide__img">
+						<div class="services_slide_content">
+							<div class="services_slide_content__counter"><span
+								class="services_slide_content__counter-accent">03</span>/05
+							</div>
+							<div class="services_slide_content__header">Производим отделочные работы</div>
+							<ul class="ul-check">
+								<li>Штукатурные работы</li>
+								<li>Гидроизоляция чаши бассейна</li>
+								<li>Проведение гидроиспытания чаши бассейна</li>
+								<li>Облицовка чаши бассейна</li>
+								<li>Установка лицевых элементов
+								</li>
+							</ul>
+
+							<div class="services_slide_footer">
+								<a href="#" class="btn">Детальнее</a>
+								<a href="#" class="btn btn_accent">Рассчитать проект</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="services_slide">
+						<img src="/images/services-4.jpg" alt="slide" class="services_slide__img">
+						<div class="services_slide_content">
+							<div class="services_slide_content__counter"><span
+								class="services_slide_content__counter-accent">04</span>/05
+							</div>
+							<div class="services_slide_content__header">Выполняем монтаж оборудования</div>
+							<ul class="ul-check">
+								<li>Монтаж технического оборудования</li>
+								<li>Проводим пуско-наладочные работы</li>
+							</ul>
+
+							<div class="services_slide_footer">
+								<a href="#" class="btn">Детальнее</a>
+								<a href="#" class="btn btn_accent">Рассчитать проект</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="services_slide">
+						<img src="/images/services-5.jpg" alt="slide" class="services_slide__img">
+						<div class="services_slide_content">
+							<div class="services_slide_content__counter"><span
+								class="services_slide_content__counter-accent">05</span>/05
+							</div>
+							<div class="services_slide_content__header">Сдаем бассейн в эксплуатацию
+							</div>
+							<ul class="ul-check">
+								<li>Подписываем акт выполненных работ</li>
+								<li>Учим пользоваться оборудованием</li>
+								<li>Подписываем гарантийные документы и инструкции</li>
+							</ul>
+
+							<div class="services_slide_footer">
+								<a href="#" class="btn">Детальнее</a>
+								<a href="#" class="btn btn_accent">Рассчитать проект</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 			</div>
 			<!-- Add Arrows -->
-			<div class="swiper-button-next swiper-button-white"></div>
-			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper_container-navigation">
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+			</div>
+
 		</div>
 
 
@@ -557,14 +737,14 @@ c47 0 85 -3 85 -8z"/>
 				<div data-consultation="consultation-2" class="consultation_asaid_item">
 					<img src="/images/manager/Kravchenko.jpg" alt="" class="consultation_asaid_item__img">
 					<div class="consultation_asaid_item__name">Кравченко Андрей Иванович
-						<div class="consultation_asaid_item__name-little">Руководитель проектов строительства бассейнов	</div>
+						<div class="consultation_asaid_item__name-little">Руководитель проектов строительства бассейнов</div>
 					</div>
 
 				</div>
 				<div data-consultation="consultation-3" class="consultation_asaid_item">
 					<img src="/images/manager/Shevchenko.jpg" alt="" class="consultation_asaid_item__img">
 					<div class="consultation_asaid_item__name">Шевченко Николай Иванович
-						<div class="consultation_asaid_item__name-little">Прораб </div>
+						<div class="consultation_asaid_item__name-little">Прораб</div>
 					</div>
 
 				</div>
@@ -585,10 +765,17 @@ c47 0 85 -3 85 -8z"/>
 						<div class="form-block__foto">
 							<img src="/images/manager/Pikalov.jpg" alt="">
 						</div>
-						<form action="">
-							<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-							<input type="submit" class="btn btn_input" value="Получить консультацию">
+
+						<form action="" id="uForm_5" class="uForm" method="post">
+							<input id="uForm__hidden_5" name="name-form" type="hidden" value="Форма получить консультацию - Пикалов">
+							<input id="uForm__tel_5" name="tel" placeholder="+38 097 777 77 77" required>
+							<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+							<input id="uForm__submit_5" name="submit" type="submit" class="btn btn_input"
+										 value="Получить консультацию">
+							<p id="uForm__error-msg_5" class="uForm__error-msg"></p>
+							<div id="uForm__preload_5" class="uForm__preload"></div>
 						</form>
+
 					</div>
 				</div>
 				<div id="consultation-2" class="consultation__form-block form-block__trigon">
@@ -605,29 +792,41 @@ c47 0 85 -3 85 -8z"/>
 						<div class="form-block__foto">
 							<img src="/images/manager/Kravchenko.jpg" alt="">
 						</div>
-						<form action="">
-							<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-							<input type="submit" class="btn btn_input" value="Получить консультацию">
+						<form action="" id="uForm_6" class="uForm" method="post">
+							<input id="uForm__hidden_6" name="name-form" type="hidden"
+										 value="Форма получить консультацию - Кравченко">
+							<input id="uForm__tel_6" name="tel" placeholder="+38 097 777 77 77" required>
+							<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+							<input id="uForm__submit_6" name="submit" type="submit" class="btn btn_input"
+										 value="Получить консультацию">
+							<p id="uForm__error-msg_6" class="uForm__error-msg"></p>
+							<div id="uForm__preload_6" class="uForm__preload"></div>
 						</form>
 					</div>
 				</div>
 				<div id="consultation-3" class="consultation__form-block form-block__trigon">
 					<div class="form-block">
-						<div class="form-block__name">Шевченко  <br> Николай Иванович
+						<div class="form-block__name">Шевченко <br> Николай Иванович
 							<div class="form-block__name-little">Прораб</div>
 						</div>
 						<div class="form-block_body">
 							<div class="form-block__old"><span class="form-block__old-int">15</span>лет</div>
 							<div class="form-block__text">
-								опыта ведения строительных и отделочных работ. То что для других «сложное архитектурное решение» для него — в порядке вещей.
+								опыта ведения строительных и отделочных работ. То что для других «сложное архитектурное решение» для
+								него — в порядке вещей.
 							</div>
 						</div>
 						<div class="form-block__foto">
 							<img src="/images/manager/Shevchenko.jpg" alt="">
 						</div>
-						<form action="">
-							<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-							<input type="submit" class="btn btn_input" value="Получить консультацию">
+						<form action="" id="uForm_6" class="uForm" method="post">
+							<input id="uForm__hidden_6" name="name-form" type="hidden" value="Форма получить консультацию - Шевченко">
+							<input id="uForm__tel_6" name="tel" placeholder="+38 097 777 77 77" required>
+							<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+							<input id="uForm__submit_6" name="submit" type="submit" class="btn btn_input"
+										 value="Получить консультацию">
+							<p id="uForm__error-msg_6" class="uForm__error-msg"></p>
+							<div id="uForm__preload_6" class="uForm__preload"></div>
 						</form>
 					</div>
 				</div>
@@ -923,9 +1122,14 @@ c47 0 85 -3 85 -8z"/>
 					<div class="">
 						<div class="form-block form-block__trigon">
 							<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
-							<form action="">
-								<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-								<input type="submit" class="btn btn_input" value="Узнать стоимость">
+
+							<form action="" id="uForm_7" class="uForm" method="post">
+								<input id="uForm__hidden_7" name="name-form" type="hidden" value="Форма узнайте ЧЕСТНУЮ стоимость">
+								<input id="uForm__tel_7" name="tel" placeholder="+38 097 777 77 77" required>
+								<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+								<input id="uForm__submit_7" name="submit" type="submit" class="btn btn_input" value="Узнать стоимость">
+								<p id="uForm__error-msg_7" class="uForm__error-msg"></p>
+								<div id="uForm__preload_7" class="uForm__preload"></div>
 							</form>
 						</div>
 					</div>
@@ -1043,25 +1247,43 @@ c47 0 85 -3 85 -8z"/>
 		<h2 class="h2">Галерея наших работ</h2>
 		<div class="swiper-container gallery-works-pull__swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url(images/s-1.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-2.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-3.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-4.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-6.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/main-screen-1.jpg)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-2.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/expert.jpg)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-2.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-3.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-4.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-6.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-1.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-2.png)"></div>
-				<div class="swiper-slide" style="background-image: url(images/s-3.png)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-1.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-2.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-3.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-4.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-5.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-6.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-7.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-8.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-9.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-10.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-11.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-12.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-13.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-14.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-15.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-16.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-17.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-18.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-19.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-20.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-21.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-22.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-23.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-24.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-25.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-26.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-27.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-28.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-29.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-30.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(images/gallery/gallery-31.jpg)"></div>
 			</div>
 
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper_container-navigation">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
 			<!-- Add Pagination -->
 			<div class="swiper-pagination"></div>
 		</div>
@@ -1083,17 +1305,21 @@ c47 0 85 -3 85 -8z"/>
 <div class="beton-price">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<h2 class="h2">узнайте стоимость <span class="lowercase">строительства бетонного бассейна</span></h2>
 				<p class="beton-price_descript">Эксперты просчитают интересующий вас проект, даже если у вас есть только
 					"задумка" или картинка из интернета!</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-lg-6">
 				<div class="form-block form-block__trigon">
 					<p class="form-block__header">Оставьте номер телефона и эксперт перезвонит вам в ближайшее время</p>
-					<form action="">
-						<input type="text" placeholder="+380 97 777 77 77" class="form-block__input-text" required="">
-						<input type="submit" class="btn btn_input" value="Узнать стоимость">
+					<form action="" id="uForm_8" class="uForm" method="post">
+						<input id="uForm__hidden_8" name="name-form" type="hidden" value="Форма узнайте  стоимость - 2 ">
+						<input id="uForm__tel_8" name="tel" placeholder="+38 097 777 77 77" required>
+						<input class="uForm__extended" name="nospam" type="hidden" value="uform-empty" required>
+						<input id="uForm__submit_8" name="submit" type="submit" class="btn btn_input" value="Узнать стоимость">
+						<p id="uForm__error-msg_8" class="uForm__error-msg"></p>
+						<div id="uForm__preload_8" class="uForm__preload"></div>
 					</form>
 				</div>
 			</div>
@@ -1110,30 +1336,42 @@ c47 0 85 -3 85 -8z"/>
 		<div class="swiper-container certificate_swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="/images/certificate/certificate-1.jpg" alt="">
+					<a class="image-popup-vertical-fit" href="/images/certificate/certificate-1.jpg">
+						<img src="/images/certificate/certificate-1.jpg" alt="">
+					</a>
 					<div class="certificate_slide_title">Скиммерный бассейн в частном доме</div>
 				</div>
 				<div class="swiper-slide">
-					<img src="/images/certificate/certificate-2.jpg" alt="">
+					<a class="image-popup-vertical-fit" href="/images/certificate/certificate-2.jpg">
+						<img src="/images/certificate/certificate-2.jpg" alt="">
+					</a>
 					<div class="certificate_slide_title">Скиммерный бассейн в частном доме</div>
 				</div>
 				<div class="swiper-slide">
-					<img src="/images/certificate/certificate-3.jpg" alt="">
+					<a class="image-popup-vertical-fit" href="/images/certificate/certificate-3.jpg">
+						<img src="/images/certificate/certificate-3.jpg" alt="">
+					</a>
 					<div class="certificate_slide_title">Скиммерный бассейн в частном доме</div>
 				</div>
 				<div class="swiper-slide">
-					<img src="/images/certificate/certificate-4.jpg" alt="">
+					<a class="image-popup-vertical-fit" href="/images/certificate/certificate-4.jpg">
+						<img src="/images/certificate/certificate-4.jpg" alt="">
+					</a>
 					<div class="certificate_slide_title">Скиммерный бассейн в частном доме</div>
 				</div>
 				<div class="swiper-slide">
-					<img src="/images/certificate/certificate-5.jpg" alt="">
+					<a class="image-popup-vertical-fit" href="/images/certificate/certificate-5.jpg">
+						<img src="/images/certificate/certificate-5.jpg" alt="">
+					</a>
 					<div class="certificate_slide_title">Скиммерный бассейн в частном доме</div>
 				</div>
 
 			</div>
 			<div class="swiper-pagination"></div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
+			<div class="swiper_container-navigation">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
 		</div>
 
 	</div>
@@ -1145,23 +1383,27 @@ c47 0 85 -3 85 -8z"/>
 		<div class="row">
 			<div class="col-6 col-md-3">
 				<h2 class="h2">видео <br> наших работ</h2>
-				<a href="#" class="video-gallery_link">Смотреть другие работы</a>
+				<a href="https://www.intercom.in.ua/works/pools/video/" class="video-gallery_link" target="_blank">Смотреть
+					другие работы</a>
 			</div>
 			<div class="col-6 col-md-3">
-				<a class="image-popup-vertical-fit video-gallery_item" href="/images/main-screen-1.jpg"
-					 title="Хочу такой басеин">
+				<a class="popup-youtube image-popup-vertical-fit video-gallery_item"
+					 href="https://www.youtube.com/watch?v=YSupbrH80TQ"
+				>
 					<img src="/images/video-gallery.jpg" alt="">
 				</a>
 			</div>
 			<div class="col-6 col-md-3">
-				<a class="image-popup-vertical-fit video-gallery_item" href="/images/main-screen-1.jpg"
-					 title="Хочу такой басеин">
+				<a class="popup-youtube image-popup-vertical-fit video-gallery_item"
+					 href="https://www.youtube.com/watch?v=XwOhq6FCWgw"
+				>
 					<img src="/images/video-gallery.jpg" alt="">
 				</a>
 			</div>
 			<div class="col-6 col-md-3">
-				<a class="image-popup-vertical-fit video-gallery_item" href="/images/main-screen-1.jpg"
-					 title="Хочу такой басеин">
+				<a class="popup-youtube image-popup-vertical-fit video-gallery_item"
+					 href="https://www.youtube.com/watch?v=WmUkVoo6ht0"
+				>
 					<img src="/images/video-gallery.jpg" alt="">
 				</a>
 			</div>
@@ -1174,9 +1416,12 @@ c47 0 85 -3 85 -8z"/>
 <footer class="footer">
 	<div class="footer_sub">
 		<div class="map">
-			<a href="https://goo.gl/maps/SYEUJkyceHKKo2k9A" target="_blank">
-				<img src="/images/map.jpg" alt="" class="map_img">
-			</a>
+			<div class="map_img">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0934977304837!2d30.4036766159115!3d50.45798359470277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc5c8fd8f5f1%3A0x50ec0b54ca96876!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNGLLCA2Nywg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1588315724505!5m2!1sru!2sua"
+					width="100%" height="330" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+					tabindex="0"></iframe>
+			</div>
 			<div class="map_content">
 				<div class="map_header">офис и шоу-рум комПании intercom</div>
 				<div class="map_tel">+380 (67) 629 79 72</div>
@@ -1205,12 +1450,6 @@ c47 0 85 -3 85 -8z"/>
 </footer>
 
 
-
-
-
-
-
-
 <div id="info-modal" class="mfp-hide ">
 	<p><a class="popup-modal-dismiss" href="#">X</a></p>
 	<h2 class="h2">закажите профессиональное проектирование бассейна</h2>
@@ -1219,7 +1458,7 @@ c47 0 85 -3 85 -8z"/>
 	<div class="mfp_list-ul">
 		<ul class="ul-check">
 			<li>22 года на рынке</li>
-			<li>Персональные 	менеджеры эксперты	с опытом  более 10 лет</li>
+			<li>Персональные менеджеры эксперты с опытом более 10 лет</li>
 			<li>Подготовили более 500 проектов бетонных бассейнов</li>
 		</ul>
 	</div>
@@ -1227,9 +1466,14 @@ c47 0 85 -3 85 -8z"/>
 
 	<div class="form-block">
 		<p class="form-block__header">Получите лучшую цену на проектирование бассейна</p>
-		<form action="">
-			<input type="text" placeholder="+380 97 777 77 77" required="">
-			<input type="submit" class="btn btn_input" value="Получить просчет">
+
+		<form action="" id="uForm_9" class="uForm" method="post">
+			<input id="uForm__hidden_9" name="name-form" type="hidden" value="Форма Получить просчет - попап ">
+			<input id="uForm__tel_9" name="tel" placeholder="+38 097 777 77 77" required>
+			<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+			<input id="uForm__submit_9" name="submit" type="submit" class="btn btn_input" value="Получить просчет">
+			<p id="uForm__error-msg_9" class="uForm__error-msg"></p>
+			<div id="uForm__preload_9" class="uForm__preload"></div>
 		</form>
 	</div>
 </div>
@@ -1244,7 +1488,7 @@ c47 0 85 -3 85 -8z"/>
 	<div class="mfp_list-ul">
 		<ul class="ul-check">
 			<li>Предварительный просчет — 1 день</li>
-			<li>Точный расчет сметы — от 4 дней	</li>
+			<li>Точный расчет сметы — от 4 дней</li>
 			<li>Готовый проект — от 14 дней</li>
 		</ul>
 	</div>
@@ -1252,15 +1496,17 @@ c47 0 85 -3 85 -8z"/>
 
 	<div class="form-block">
 		<p class="form-block__header">Получите лучшую цену на проектирование бассейна</p>
-		<form action="">
-			<input type="text" placeholder="+380 97 777 77 77" required="">
-			<input type="submit" class="btn btn_input" value="Получить просчет">
+		<form action="" id="uForm_10" class="uForm" method="post">
+			<input id="uForm__hidden_10" name="name-form" type="hidden" value="Форма Получить просчет - попап ">
+			<input id="uForm__tel_10" name="tel" placeholder="+38 097 777 77 77" required>
+			<input class="uForm__extended" name="nospam" type="text" value="uform-empty" required>
+			<input id="uForm__submit_10" name="submit" type="submit" class="btn btn_input" value="Получить просчет">
+			<p id="uForm__error-msg_10" class="uForm__error-msg"></p>
+			<div id="uForm__preload_10" class="uForm__preload"></div>
 		</form>
 	</div>
 </div>
-798987
 
-<!--<div class="" style="height: 800px"></div>-->
 <script src="js/scripts.min.js"></script>
 </body>
 </html>
