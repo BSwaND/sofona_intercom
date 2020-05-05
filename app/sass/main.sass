@@ -75,6 +75,8 @@ h1,.h1, h2, .h2, h3, .h3
 		font-size: 18px
 		a
 			color: #fff
+			&:hover
+				text-decoration: none
 		
 	.logo_img__color
 		display: none
@@ -141,7 +143,7 @@ h1,.h1, h2, .h2, h3, .h3
 					svg
 						fill: $accent !important
 					.swiper-slide_body_asaid__text
-						font-size: 10px
+						font-size: 12px
 						font-weight: 400
 						color: $accent
 		&_container-navigation
@@ -319,6 +321,7 @@ h1,.h1, h2, .h2, h3, .h3
 			cursor: pointer
 			position: relative
 			line-height: 14px
+			border: 1px solid transparent
 			&:after
 				position: absolute
 				content: ''
@@ -394,7 +397,7 @@ h1,.h1, h2, .h2, h3, .h3
 		margin: 60px 0
 	&_asaid
 		flex: 3
-		margin-top: 40px
+		margin-top: 29px
 		&_item
 			display: flex
 			margin-right: 0px
@@ -433,15 +436,8 @@ h1,.h1, h2, .h2, h3, .h3
 	.form-block
 		text-align: left
 		&__trigon
-			padding: 35px 20px 30px 40px
-			&:before
-				border: 30px solid transparent
-				border-right: 43px solid #fbba2f
-				left: -73px
 			&:after
-				border: 25px solid transparent
-				border-right: 38px solid $footer
-				left: -63px
+				border-right: 35px solid #f7f7f7
 		&__name
 			font-size: 16px
 			text-align: left
@@ -449,10 +445,12 @@ h1,.h1, h2, .h2, h3, .h3
 			text-transform: uppercase
 			margin-bottom: 15px
 			&-little
-				text-transform: capitalize
+				text-transform: lowercase
 				font-weight: 600
 				font-size: 12px
 				margin-top: 5px
+				&:first-letter
+					text-transform: uppercase
 		&_body
 			display: flex
 			margin: 45px 0
@@ -489,20 +487,20 @@ h1,.h1, h2, .h2, h3, .h3
 		&:before
 			top: 40px
 		&:after
-			top: 45px
+			top: 35px
 #consultation-2
 	&.form-block__trigon
 		&:before
 			top: 140px
 		&:after
-			top: 145px
+			top: 135px
 			//border-right: 38px solid #E9F4F8
 #consultation-3
 	&.form-block__trigon
 		&:before
 			top: 250px
 		&:after
-			top: 255px
+			top: 245px
 			//border-right: 38px solid #E0EEF9
 // End consultation
 
@@ -564,7 +562,11 @@ h1,.h1, h2, .h2, h3, .h3
 		&:nth-child(15),	&:nth-child(20),
 		&:nth-child(25),	&:nth-child(30)
 			height: calc(30% - 0px)
-			
+	&_link-foto
+		display: block
+		width: 100%
+		height: 100%
+		
 	.swiper_container-navigation
 		top: 29%
 		width: calc(100% + -10px)
@@ -782,7 +784,7 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Star video-gallery
 .video-gallery
-	margin: 60px 0
+	margin: 60px 0 60px
 	&_item
 		display: block
 		position: relative
@@ -804,7 +806,7 @@ h1,.h1, h2, .h2, h3, .h3
 		img
 			object-fit: cover
 			width: 100%
-			height: 100%
+			height: 180px
 	&_link
 		margin-top: 60px
 		color: $accent
@@ -816,7 +818,7 @@ h1,.h1, h2, .h2, h3, .h3
 			color: lighten($accent, 15%)
 	.h2
 		text-align: left
-		
+		margin-top: 25px
 
 // End video-gallery
 
@@ -939,5 +941,10 @@ h1,.h1, h2, .h2, h3, .h3
 .accent
 	color: $accent
 	font-weight: 600
+	
+	
+	
+	
+	
 // media
 @import media

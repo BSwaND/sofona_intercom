@@ -3,35 +3,28 @@
 
 /*==========  Desktop First  ==========*/
 // ≥2000px
-@media screen and (min-width: 2000px)
-	.main-screen
-		&__gallery-thumbs
-			left: 1570px !important
+@media screen and (max-width: 2000px)
+	//
 	
-@media screen and (min-width: 1920px)
-	.main-screen
-		&__gallery-thumbs
-			left: 1230px
+@media screen and (max-width: 1920px)
+	//
 
 
-// ≥1200px
-@media screen and (min-width: 1200px)
-	.main-screen 
-		.swiper_container-navigation
-			//display: none
-
-	
-	.beton
-		.form-block
-			margin-left: 30px
-		&-price
-			.form-block
-				margin-left: -20px
+@media screen and (max-width: 1440px)
+	//
+		
+		
+// ≥1000px
+@media screen and (max-width: 1000px)
+	//
 	
 			
 			
-// ≥992px
+// ≥720px
 +media-breakpoint-down(md)
+
+	
+	
 	.main-screen__gallery-thumbs,
 	.services_slide__img
 		display: none !important
@@ -58,45 +51,135 @@
 			img
 				width: 200px
 				height: 200px
-	.gallery-works-pull__swiper-container
-		.swiper-slide:nth-child(n)
-			height: 100%
 		
 	.beton,
 	.beton-price
 		.form-block
 			text-align: center
 			background: none
-			border: 3px solid #74777E
 			margin-left: 0
 	.beton-price
 		.form-block__trigon
 			&:after,
 			&:before
-				display: none
+				//display: none
 			input
 				width: 100% !important
 		
 		
 // ≥768px
 +media-breakpoint-down(sm)
+	.h1, .h2, .h3, h1, h2, h3
+		font-size: 18px
+		font-weight: 600
+		text-align: center
+		line-height: 24px
+	
+	.container
+		padding-right: 15px
+		padding-left: 15px
+	
 	.price-pool_body,
 	.consultation_body,
 	.price-pool_body__expet-block,
 	.command_flex
 		flex-flow: row wrap
 	
-	.form-block__trigon
-		&:after,
-		&:before
-			display: none
+
 		
 	.swiper-slide_body
 		&_asaid
 			display: none
 
+	.consultation
+		padding: 40px 0 80px
+		.form-block
+			&_body
+				margin: -8px 0 40px
+				&__costum
+					margin-top: 6px
+			&__foto
+				position: relative
+				top: 0
+				right: 0
+				display: inline-block
+				width: 90px
+				&__costum
+					transform: translateY(-17px)
+				img
+					width: 100%
+					height: 95px
+			&__name
+				display: inline-block
+				font-size: 12px
+				width: 150px
+				height: 90px
+				padding-left: 20px
+			&__old
+				padding-left: 10px
+		.form-block__trigon
+			padding: 35px 15px
+		input
+			width: calc(100% - 30px) !important
+			display: block
+			margin: 5px auto
+	
+	.benefits
+		padding: 10px 0 0
+		&_item
+			margin-top: 10px
+		.h2
+			margin-bottom: 50px
+		
+	.beton
+		padding: 8px 0 40px
+		&_item
+			margin-bottom: 20px
+			&_text
+				font-size: 12px
+				flex: 0 200px
+			&_profit
+				font-size: 12px
+			&_arrow
+				padding-top: 1px
+				svg
+					width: 48px
+		.h2
+			text-align: center
+			margin-bottom: 80px
+		.form-block
+			background: url(../images/bg-form-2-m.svg) no-repeat
+			margin-top: -20px
+			padding: 73px 10px 35px
+			line-height: 22px
+			background-size: contain
+			&__header
+			font-weight: 400
+			font-size: 14px
+			input
+				width: 100% !important
+	
+	.gallery-works-pull .gallery-works-pull__swiper-container
+		height: 210px
+	.gallery-works-pull
+		.swiper-slide
+			margin-top: 15px
+			&:nth-child(n)
+				height: 100%
+		.swiper-pagination
+			display: none
+		
+	.video-works
+		&_block
+			margin: 0
+		.form-block
+			width: auto
+			margin-top: 0
 			
-	.form-block__foto,
+			
+
+	
+	
 	.gallery-thumbs,
 	.main-screen__gallery-thumbs
 		display: none
@@ -114,38 +197,193 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
-	.swiper-button-prev,
-	.swiper-button-next,
-	.command,
-	.gallery-works-pull
-			display: none !important
-			
+
+	
+	.header
+		padding: 3px 0
+		&_telephone_blok
+			font-size: 14px
+	
+	.logo_img
+		width: 70%
+		padding-top: 10px
+	
 	.main-screen
+		margin-bottom: 35px
+		&__header
+			text-align: center
+			font-size: 20px
 		&__swiper-container
 			.swiper-slide
 				&_body
-					height: 680px
+					height: 421px
 					padding-right: 20px
 					&_inner
-						padding-top: 60px !important
+						padding-top: 25px
+						line-height: 28px
+						.accent-text
+							font-size: 24px
 		input
-			width: calc(100% - 30px) !important
+			width: 210px !important
 			display: block
 			margin:  15px auto
 		.form-block
-			margin-top: 20px
+			p
+				margin: 60px auto 0
+				font-size: 14px
+				text-align: center
+				width: 70%
+				line-height: 18px
+			
+		.ms
+			font-size: 14px
+			text-align: center
+			width: 70%
+			margin: 23px auto
+			line-height: 18px
+			
+	
+	.gallery-works
+		&_section
+			padding: 20px 0 0
+		&__swiper-container
+			height: 230px
+			margin: 25px 0
+			//width: calc(100% + 15px)
+			.swiper-pagination
+				display: none
+			
+			.swiper-slide
+				height: 100%
 			
 
-	.gallery-works__swiper-container
-		height: 220px
-		//padding-bottom: 0
-		.swiper-slide
-			height: 100%
-
-	.beton .form-block
-			margin-left: 0
-			padding-right: 30px
+	.price-pool
+		margin: 37px 0 10px
+		.h2
+			text-align: center
+		&_body__expet-block
+			display: flex
+			margin-bottom: 0
+		.form-block
+			padding: 30px 22px 25px
+			line-height: 18px
+			font-weight: 400
+			
+	.expet-block
+		&_foto
+			width: 130px
+			height: 150px
+			padding: 10px 0 0
+			flex: 0 60px
+			object-fit: cover
+		&_body
+			flex: 1
 			padding-left: 30px
+			padding-top: 10px
+		&__name
+			font-size: 14px
+			
+		&__list
+			margin-top: 10px
+			font-size: 10px
+			
+			
+	.services
+		margin-bottom: 0
+		.h2
+			line-height: 22px
+			margin-bottom: 27px
+		&_slide
+			&_content
+				padding: 0
+				&__counter
+					text-align: center
+					margin-top: 5px
+					margin-bottom: 10px
+					span
+						font-size: 30px
+				&__header
+					text-align: center
+		
+		&_slide_footer
+			margin-top: 30px
+			padding: 0 20px
+			.btn
+				width: calc(100% - 40px)
+				//min-width: 100%
+				margin: 5px 0
+					
+		.ul-check
+			padding-left: 40px
+			margin-bottom: 10px
+		 li:before
+			 left: -35px
+		
+		.swiper_container-navigation
+			display: block
+			width: 210px!important
+			top: 122px!important
+			margin: auto
+		.swiper-button-next,
+		.swiper-button-prev
+			display: block !important
+		
+		
+			
+			
+	.consultation
+		.h2
+			text-align: center
+		&_body
+			margin: 0
+		&_asaid
+			display: flex
+			&_item
+				flex: 0  33%
+				display: flex
+				flex-flow: column nowrap
+				padding: 0 10px 0 10px
+				&__name
+					font-size: 9px
+			&_item__img
+				width: 100%
+		.form-block__name-little
+			font-size: 11px
+				
+		#consultation-1
+			&.form-block__trigon
+			&:before
+				left: 10px !important
+			&:after
+				left: 5px !important
+		#consultation-2
+			&.form-block__trigon
+			&:before
+				left: 110px !important
+			&:after
+				left: 105px !important
+		#consultation-3
+			&.form-block__trigon
+			&:before
+				left: 210px !important
+			&:after
+				left: 205px !important
+
+		
+		
+		
+
+		
+		
+	.swiper-button-prev,
+	.swiper-button-next,
+	.command
+			display: none !important
+			
+
+
+
+
 		
 	.price-pool .form-block
 		margin: 0 !important
@@ -154,37 +392,114 @@
 		display: none
 		padding-left: 0
 		
-	.services_slide_footer
-		margin-top: 30px
-		.btn
-			width: 200px
-			margin: 10px 0
+
+			
+	.consultation__form-block
+		max-width: 290px
 			
 	.beton
 		margin-bottom: 0
 		&_body
 			input
 				width: 200px !important
-				
 		&-price
 			.form-block
 				margin-left: 0
 			input
 				width: 210px !important
+		.form-block
+			margin-left: 0
+			padding-right: 30px
+			padding-left: 30px
+			transform: none
+				
 				
 	.map_img
 		flex: 100%
+		
+		
+	.form-block__trigon
+		&:after,
+		&:before
+			transform: rotate(90deg)
+			top: -62px !important
+		&:before
+			left: 40px !important
+		&:after
+			left: 35px !important
 
+		
+
+@media screen and (max-width: 320px)
+	//
+	
 /*==========  Mobile First  ==========*/
 
+@media screen and (min-width: 320px)
+	//
+
+	
 // ≤576px
 +media-breakpoint-up(sm)
+
 
 // ≤768px
 +media-breakpoint-up(md)
 
-// ≤992px
-+media-breakpoint-up(lg)
 
-// ≤1200px
-+media-breakpoint-up(xl)
+// ≥1000px
+@media screen and (min-width: 1024px)
+	.main-screen
+		.swiper_container-navigation
+			max-width: 1000px
+	
+	.main-screen__gallery-thumbs
+		left: 780px
+	
+	.gallery-works_section .swiper_container-navigation,
+	.services .swiper_container-navigation,
+	.certificate .swiper_container-navigation
+		width: 1000px
+		left: 0px
+		right: 0px
+		
+	.main-screen__swiper-container
+		.swiper-slide_body
+			padding: 80px 30px
+			
+	.beton
+		.form-block
+			margin-left: 25px
+		&-price
+			.form-block
+			margin-left: -20px
+
+	.beton-price .form-block
+		margin-left: 0px
+		width: 500px
+		height: 180px
+		
+		
+@media screen and (min-width: 1400px)
+	.main-screen
+		.swiper_container-navigation
+			max-width: 1080px
+	.gallery-works_section .swiper_container-navigation,
+	.services .swiper_container-navigation,
+	.certificate .swiper_container-navigation
+		width: 1080px
+	
+	.main-screen__gallery-thumbs
+		left: 990px
+		
+
+@media screen and (min-width: 1920px)
+	.main-screen
+		&__gallery-thumbs
+			left: 1230px
+			
+@media screen and (min-width: 2000px)
+	.main-screen
+		&__gallery-thumbs
+			left: 1570px !important
+			

@@ -7,7 +7,7 @@ input
 	height: 45px
 	width: 220px
 	padding: 0 15px
-	color: $text-input
+	color: $text
 	font-size: 12px
 	border: none
 	margin-right: 10px
@@ -38,6 +38,13 @@ input[type=submit]
 		text-decoration: none
 	&_accent
 		background: $accent
+		
+
+.gallery-works_btn-form
+	display: block
+	margin: auto
+	width: 200px
+	transform: translateY(-130px)
 	
 // Star swiper
 .swiper
@@ -46,13 +53,17 @@ input[type=submit]
 		&-next
 			height: 33px
 			cursor: pointer
-			width: 49%
+			width: 40px
 			display: inline-block
 			position: relative
 		&-prev
 			background: url(../images/icon/arrow-left.png) no-repeat left
+			position: absolute
+			left: 0
 		&-next
 			background: url(../images/icon/arrow-rigth.png) no-repeat right
+			position: absolute
+			right: 0
 
 	&-pagination-bullet
 		height: 3px
@@ -135,6 +146,8 @@ input[type=submit]
 .mfp
 	&-bg
 		background: $bg-modal
+	&-close
+		transform: translateY(40px)
 	&-content
 		background: #fff
 		max-width: 680px
@@ -180,6 +193,8 @@ input[type=submit]
 
 .mfp-image-holder .mfp-content
 	background: none
+.mfp-iframe-holder .mfp-close
+	top: -90px
 	
 	
 .popup-modal-dismiss
@@ -187,10 +202,6 @@ input[type=submit]
 	right: 20px
 	top: 20px
 	color: $text
-
-.mfp-iframe-holder .mfp-close,
-.mfp-image-holder .mfp-close
-	display: none
 	
 // End magnifik popap
 

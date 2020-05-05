@@ -46,13 +46,16 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 
 			576: {
-				slidesPerView: 2,
+				slidesPerView: 1,
+			},
+
+			320: {
+				slidesPerView: 1,
 			},
 		}
 	});
 
 	new Swiper('.gallery-works-pull__swiper-container', {
-		spaceBetween: 15,
 		autoplay: {
 			delay: 5000,
 		},
@@ -68,14 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
 			1024: {
 				slidesPerView: 3,
 				slidesPerColumn: 2,
+				spaceBetween: 15,
 			},
 			768: {
-				slidesPerView: 2,
+				slidesPerView: 3,
 				slidesPerColumn: 1,
+				spaceBetween: 15,
 			},
 
-			576: {
+			320: {
 				slidesPerView: 1,
+				spaceBetween: 0,
 			},
 		}
 	});
@@ -120,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				slidesPerView: 5,
 			},
 			1024: {
-				slidesPerView: 3,
+				slidesPerView: 5,
 			},
 			768: {
 				slidesPerView: 3,
@@ -144,15 +150,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// End передвижка кнопок слайдера
 
+	jQuery('.command .command_item').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true		}
+
+	});
+
+
 	jQuery('.image-popup-vertical-fit').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
 		mainClass: 'mfp-img-mobile',
 		image: {
-			verticalFit: true
-		}
+			verticalFit: true		}
 
 	});
+
 
 
 	jQuery('.popup-modal').magnificPopup({
@@ -185,7 +201,53 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
-	$("input[name=tel]").mask("+3(809) 999-9999");
+	jQuery('.gallery-works_section .swiper-wrapper').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				//return item.el.attr('title') + '<small></small>';
+				return  '<a  href="#form-modal" class="btn btn_accent popup-modal gallery-works_btn-form">Хочу такой бассейн</a>';
+			}
+		},
+
+		 callbacks: {
+			change: function() {
+				setTimeout(function () {
+					console.log('change')
+					jQuery('.gallery-works_btn-form').click(function () {
+						console.log('tyt');
+						jQuery('.gallery-works_section .swiper-wrapper').magnificPopup('close');
+						jQuery('.popup-modal').magnificPopup('open')
+					})
+				}, 500)
+			}
+		 }
+	});
+
+
+	jQuery('.gallery-works-pull .swiper-wrapper').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
+
+
+	$("input[name=tel]").mask("+38 (999) 999-99-99");
 
 
 	// Start fixed header menu
