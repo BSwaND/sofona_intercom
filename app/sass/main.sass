@@ -42,6 +42,7 @@ h1,.h1, h2, .h2, h3, .h3
 // star nav
 .nav
 	display: flex
+	padding-left:  0
 	li
 		display: block
 		margin: 0 20px
@@ -64,14 +65,16 @@ h1,.h1, h2, .h2, h3, .h3
 	height: 80px
 	z-index: 50
 	.nav
-		margin-top: 15px
+		margin-top: 20px
 		li
 		a
 			font-size: 13px
 	&_telephone_blok
 		text-align: right
-		margin-top: 12px
+		margin-top: 20px
 		font-size: 18px
+		a
+			color: #fff
 		
 	.logo_img__color
 		display: none
@@ -91,19 +94,20 @@ h1,.h1, h2, .h2, h3, .h3
 					padding: 80px 0
 					&_inner
 						display: flex
-						padding-top: 120px
+						padding-top: 100px
 						font-size: 18px
 						font-weight: 500
 	&__gallery-thumbs
-		width: 300px
+		width: 220px
 		position: absolute
 		top: 25%
-		left: 65%
+		left: 960px
+		margin-top: 15px !important
 	&__container
 			position: relative
 	&__header
 		font-size: 32px
-		margin-bottom: 15px
+		margin-bottom: 5px
 		.accent-text
 			font-weight: 600
 			display: block
@@ -111,20 +115,25 @@ h1,.h1, h2, .h2, h3, .h3
 	
 	.swiper
 		&-slide
+			&:nth-child(1) 	svg
+					transform: translateY(-4px)
+			&:nth-child(2) 	svg
+					transform: translateY(3px)
+			&:nth-child(3) 	svg
+					transform: translateY(4px)
 			&_body
 				&_asaid
 					&__item
 						font-size: 12px
 						display: flex
 						cursor: pointer
-						&:first-child
-							svg
-								transform: translateY(-10px)
+						text-align: right
 					&__text
 						padding-right: 15px
+						font-size: 10px
 	
 					&__img
-						flex: 90px
+						flex: 0 0 40px
 						svg
 							fill: #fff
 			&-thumb
@@ -132,18 +141,18 @@ h1,.h1, h2, .h2, h3, .h3
 					svg
 						fill: $accent !important
 					.swiper-slide_body_asaid__text
-						font-size: 13px
+						font-size: 10px
 						font-weight: 400
 						color: $accent
 		&_container-navigation
 			left: 20px
 			right: 0
-			max-width: 1300px
+			max-width: 1120px
 			margin: auto
 
 	
 	.form-block
-		margin-top: 45px
+		margin-top: 55px
 	
 // End main-screen
 
@@ -225,6 +234,7 @@ h1,.h1, h2, .h2, h3, .h3
 				display: flex
 				margin: 30px 30px 0 0
 				flex:  6
+				padding-top: 15px
 		&__form-block
 			flex:  4
 		.ul-check
@@ -234,13 +244,22 @@ h1,.h1, h2, .h2, h3, .h3
 				margin-bottom: 15px
 	
 	.form-block
+		padding: 45px 40px
 		text-align: left
-
+		input
+			width: 100% !important
+			&[type=text]
+				background: $text-input
+		.form-block__header
+			margin-bottom: 30px
+			font-weight: 600
+			
+			
 .expet-block
 	&_foto
-		padding-right:  30px
-		width: 195px
-		height: 195px
+		padding: 5px 30px 0  10px
+		width: 230px
+		height: 200px
 		object-fit: cover
 	&_body
 		display: flex
@@ -255,7 +274,7 @@ h1,.h1, h2, .h2, h3, .h3
 	&__list
 		margin-top: 30px
 		padding-left: 20px
-		
+		font-size: 12px
 // End price-pool_section
 
 
@@ -264,22 +283,24 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Start services
 .services
-	padding: 30px 0
+	padding: 60px 0 30px
 	margin-bottom: 60px
 	.container:first-child
 		position: relative
 	&_slide
 		display: flex
 		&__img
-			flex: 0 1 auto
-			margin-right: 30px
+			flex: 0 1 100%
+			object-fit: cover
+			width: 480px
+			height: 300px
 		&_content
-			flex: 0 1 auto
-			padding: 0 30px
+			flex: 0 1 100%
+			padding: 0  0 0 90px
 			&__counter
 				color: darken($grey, 15%)
 				font-size: 16px
-				margin-bottom: 10px
+				margin-bottom: 0px
 				&-accent
 					color: $accent
 					font-size: 26px
@@ -291,10 +312,10 @@ h1,.h1, h2, .h2, h3, .h3
 		&__item
 			background: $grey
 			height: 30px
-			padding: 10px 0 8px
+			padding: 8px 0 6px
 			text-align: center
 			font-size: 12px
-			margin: 0 20px
+			margin: 0 40px 0 0
 			cursor: pointer
 			position: relative
 			line-height: 14px
@@ -304,17 +325,18 @@ h1,.h1, h2, .h2, h3, .h3
 				width: 40px
 				height: 20px
 				background: url(../images/icon/arow-middle.png) center no-repeat
-				right: -40px
-				top: 15px
+				right: -45px
+				top: 9px
 				font-size: 60px
 				z-index: 10
 				&:last-child
+					margin-right: 0
 					&:after
 					display: none
 	
 					
 	.swiper_container-navigation
-		top: 65%
+		top: 66%
 	.swiper-slide-thumb-active
 		.services_gallery-thumbs__item
 			background: #fff
@@ -326,17 +348,32 @@ h1,.h1, h2, .h2, h3, .h3
 		.accent
 			font-weight: 600
 			color: $accent
-	
+	.gallery-thumbs
+		margin-top: 40px
+		margin-bottom: 50px
+		
+	.h2
+		line-height: 30px
+		margin-bottom: 30px
 	.last-child
 		&:after
 			display: none
 			
 	.ul-check
 		font-size: 12px
+		margin-bottom: 40px
 	.accent
 		display: block
 		font-weight: 200
 		color: $text
+		
+	.popup-modal
+		margin-right: 10px
+		&:hover
+			color: $text
+	.btn_accent
+		min-width: 180px
+	
 // End services
 
 
@@ -345,8 +382,9 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Start consultation
 .consultation
-	padding: 60px 0
-	background: url(../images/bg-consultation.jpg) no-repeat
+	padding: 100px 0 30px
+	//background: url(../images/bg-consultation.jpg) no-repeat
+	background: $footer
 	background-size: cover
 	margin-bottom: 60px
 	.h2
@@ -356,30 +394,35 @@ h1,.h1, h2, .h2, h3, .h3
 		margin: 60px 0
 	&_asaid
 		flex: 3
+		margin-top: 40px
 		&_item
 			display: flex
-			margin-right: 15px
+			margin-right: 0px
 			margin-bottom: 30px
 			filter: opacity(0.5)
 			transition: all 0.4s
 			cursor: pointer
 			&__active
 				filter: opacity(1)
+				img
+					border: 1px solid $accent
 			&__img
-				width: 60px
-				height: 60px
+				width: 70px
+				height: 70px
+				padding: 3px
 				object-fit: cover
 				margin-right: 15px
 			&__name
 				font-size: 12px
-				font-weight: 600
+				font-weight: 900
 				text-transform: uppercase
+				margin-top: 10px
 				&-little
-					font-weight: 200
+					font-weight: 600
 					text-transform: none
 	&_content
 		flex: 9
-		margin-left: 30px
+		margin-left: 55px
 	&__form-block
 		max-width: 520px
 		margin-left: 30px
@@ -390,9 +433,15 @@ h1,.h1, h2, .h2, h3, .h3
 	.form-block
 		text-align: left
 		&__trigon
-			padding: 40px 20px 40px 40px
+			padding: 35px 20px 30px 40px
+			&:before
+				border: 30px solid transparent
+				border-right: 43px solid #fbba2f
+				left: -73px
 			&:after
-				border-right: 37px solid #f5f9fa
+				border: 25px solid transparent
+				border-right: 38px solid $footer
+				left: -63px
 		&__name
 			font-size: 16px
 			text-align: left
@@ -401,17 +450,18 @@ h1,.h1, h2, .h2, h3, .h3
 			margin-bottom: 15px
 			&-little
 				text-transform: capitalize
-				font-weight: 200
+				font-weight: 600
 				font-size: 12px
-				margin-top: 10px
+				margin-top: 5px
 		&_body
 			display: flex
 			margin: 45px 0
 		&__old
 			font-weight: 600
 			text-align: center
-			margin-right: 15px
+			margin-right: 5px
 			margin-top: 10px
+			text-transform: uppercase
 			&-int
 				font-weight: 400
 				font-size: 60px
@@ -420,15 +470,15 @@ h1,.h1, h2, .h2, h3, .h3
 				line-height: 40px
 		&__text
 			font-size: 12px
-			font-weight: 400
+			font-weight: 600
 			max-width: 200px
 		&__foto
 			position: absolute
-			top: -15%
-			right: -15%
+			top: -21%
+			right: -16%
 			img
 				width: 240px
-				height: 260px
+				height: 270px
 				object-fit: cover
 	
 	.btn_input
@@ -437,29 +487,31 @@ h1,.h1, h2, .h2, h3, .h3
 #consultation-1
 	&.form-block__trigon
 		&:before
-			top: 0px
+			top: 40px
 		&:after
-			top: 3px
+			top: 45px
 #consultation-2
 	&.form-block__trigon
 		&:before
-			top: 80px
+			top: 140px
 		&:after
-			top: 83px
+			top: 145px
+			//border-right: 38px solid #E9F4F8
 #consultation-3
 	&.form-block__trigon
 		&:before
-			top: 180px
+			top: 250px
 		&:after
-			top: 183px
+			top: 255px
+			//border-right: 38px solid #E0EEF9
 // End consultation
 
 
 // Start benefits
 .benefits
-	padding: 30px 0
+	padding: 30px 0 0
 	font-size: 12px
-	margin-bottom: 60px
+	margin-bottom: 50px
 	&_item
 		margin: 30px 0
 		text-align: center
@@ -474,7 +526,8 @@ h1,.h1, h2, .h2, h3, .h3
 		&__header
 			font-weight: 700
 			text-transform: uppercase
-	
+	.h2
+		margin-bottom: 30px
 // End benefits
 
 
@@ -486,9 +539,9 @@ h1,.h1, h2, .h2, h3, .h3
 	.swiper-slide
 		background-size: cover
 	.gallery-works-pull__swiper-container
-		//padding: 0 60px
-		height: 420px
-		margin: 30px 0px 0
+		height: 380px
+		max-width: 800px
+		margin: 50px auto 0
 	.swiper-slide
 		margin-top: 15px
 		&:nth-child(1),		&:nth-child(6),
@@ -513,7 +566,9 @@ h1,.h1, h2, .h2, h3, .h3
 			height: calc(30% - 0px)
 			
 	.swiper_container-navigation
-		top: 37%
+		top: 29%
+		width: calc(100% + -10px)
+		left: 10px
 	.swiper-pagination
 		margin: 15px auto
 		text-align: center
@@ -526,21 +581,25 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Start video-works
 .video-works
-	margin: auto 60px
+	margin: 180px auto 40px
 	text-align: center
 	&_block
-		max-width: 350px
-		margin: 90px auto 60px
-		display: inline-block
+		margin: 0px 0 60px 30px
 	&_title
-		display: inline-block
-		width: 120px
 		font-size: 12px
-		margin-right: 30px
-		text-align: left
-		font-weight: 400
+		font-weight: 600
+		text-align: right
 	.form-block
-		padding: 20px
+		padding: 25px 30px 28px 25px
+		height: 192px
+		width: 348px
+		margin-top: -70px
+		margin-left: 10px
+		&__trigon:before
+			top: 56px
+			left: -60px
+		&__trigon:after
+			top: 51px
 		img
 			width: 100%
 			height: 100%
@@ -557,42 +616,37 @@ h1,.h1, h2, .h2, h3, .h3
 	color: #fff
 	background: url(../images/bg-beton.jpg)
 	background-size: cover
-	padding: 60px 0
+	padding: 40px 0 60px
 	margin-bottom: 60px
 	.h2
 		text-align: left
+		margin-bottom: 50px
 	&_body
-		margin-top: 60px
+		margin-top: 50px
 	&_item
 		display: flex
 		font-weight: 400
 		font-size: 16px
 		margin-bottom: 30px
 		&_text
-			flex: 6
-			padding-right: 60px
+			flex: 190px
 			position: relative
-			&:after
-				content: ''
-				background: url(../images/icon/arow-accent.png) no-repeat center
-				//background-size: cover
-				position: absolute
-				top: 5px
-				right: 0
-				z-index: 10
-				width: 60px
-				height: 30px
+		&_arrow
+			flex: 50px
+			padding-top: 10px
+			margin-left: 10px
 		&_profit
-			flex: 6
-			margin-left: 15px
+			flex: 230px
 			color: $accent
+			margin-left: 20px
 
 
 	.form-block
 		margin-left: 60px
-		height: 310px
+		height: 320px
 		border: none
-		background: url(../images/bg-form-1.png) no-repeat
+		transform: translate(28px, 5px)
+		background: url(../images/bg-form-2.svg) no-repeat
 		padding-right: 50px
 		padding-left: 80px
 		padding-top: 50px
@@ -602,8 +656,10 @@ h1,.h1, h2, .h2, h3, .h3
 			display: none
 		&__header
 			margin-bottom: 30px
+			font-weight: 400
 		input
-			width: calc(100% - 60px) !important
+			width: calc(100% - 15px) !important
+			color: $text
 
 // End beton
 
@@ -612,7 +668,7 @@ h1,.h1, h2, .h2, h3, .h3
 
 // Star command
 .command
-	padding: 60px 0
+	padding: 35px 0
 	text-align: center
 	&_flex
 		display: flex
@@ -621,13 +677,14 @@ h1,.h1, h2, .h2, h3, .h3
 		cursor: pointer
 		transition: all 0.4s
 		position: relative
-		flex: auto
+		flex: 20%
+		height: 150px
 		&_img
 			border: 1px solid $accent
 			padding: 5px
 			img
 				width: 100%
-				height: 100%
+				height: 150px
 				object-fit: cover
 		&_content
 			font-size: 13px
@@ -635,7 +692,7 @@ h1,.h1, h2, .h2, h3, .h3
 			display: block
 			position: absolute
 			width: calc(100% - 10px)
-			height: calc(100% - 10px)
+			height: 152px
 			top: 5px
 			left: 5px
 			padding: 60px 5px 0
@@ -651,7 +708,7 @@ h1,.h1, h2, .h2, h3, .h3
 			margin-bottom: 10px
 
 	.h2
-		margin-bottom: 30px
+		margin-bottom: 40px
 // End command
 
 
@@ -661,29 +718,38 @@ h1,.h1, h2, .h2, h3, .h3
 	background: url(../images/bg-3.jpg) no-repeat
 	background-size: cover
 	color: #fff
-	padding: 90px 0
+	padding: 90px 0 70px
 	margin-bottom: 60px
 	&_descript
 		width: 300px
 		margin: 30px 0
+		font-weight: 400
 	.h2
 		text-align: left
+		line-height: 30px
+		margin-bottom: 40px
 	.form-block
 		text-align: left
 		margin-left: 30px
-		&__trigon:after
-			display: none
-		
-	.form-block
 		background: url(../images/bg-form-2.png) no-repeat
 		border: none
-		padding: 40px 60px
+		padding: 35px 45px 40px 80px
 		&:after,
 		&:before
 			display: none
 		input
-			width: 45% !important
+			width: 197px !important
 			display: inline-block !important
+			&[type=submit]
+				width: 160px !important
+				margin-right: 0
+		&__header
+			font-size: 12px
+			margin-bottom: 25px
+		&__trigon:after
+			display: none
+	
+
 			
 // End beton-price
 
@@ -705,7 +771,10 @@ h1,.h1, h2, .h2, h3, .h3
 			font-size: 12px
 			margin: 15px 0
 			padding: 0 30px
-
+	img
+		width: 100%
+		display: block
+//		margin: 0 30px
 // End certificate
 
 
@@ -767,7 +836,8 @@ h1,.h1, h2, .h2, h3, .h3
 		font-size: 12px
 		min-height: 280px
 		background: rgb(248,251,250)
-		background: linear-gradient(156deg, rgba(248,251,250,1) 0%, rgba(228,241,255,1) 70%)
+		//background: linear-gradient(156deg, rgba(248,251,250,1) 0%, rgba(228,241,255,1) 70%)
+		background: $footer
 		padding: 180px 0 0
 		a
 			color: $text
@@ -810,6 +880,9 @@ h1,.h1, h2, .h2, h3, .h3
 	&_tel
 		font-weight: 600
 		margin-bottom: 20px
+		color: $text
+		&:hover
+			text-decoration: none
 	&_address
 		font-weight: 400
 		font-size: 12px

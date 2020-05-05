@@ -7,10 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		direction: 'vertical',
-		height: 300
+		height: 300,
 	});
 	new Swiper('.main-screen__swiper-container', {
 		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
 		thumbs: {
 			swiper: mainScreenGalleryThumbs
 		},
@@ -30,14 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 		pagination: {
 			el: '.swiper-pagination',
+			clickable: true,
 		},
 		breakpoints: {
-			1024: {
+			992: {
 				slidesPerView: 4,
 				slidesPerColumn: 2,
 			},
 			768: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				slidesPerColumn: 1,
 			},
 
@@ -49,12 +53,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	new Swiper('.gallery-works-pull__swiper-container', {
 		spaceBetween: 15,
+		autoplay: {
+			delay: 5000,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		pagination: {
 			el: '.swiper-pagination',
+			clickable: true,
 		},
 		breakpoints: {
 			1024: {
@@ -95,17 +103,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	new Swiper('.certificate_swiper-container', {
 		loop: true,
-		spaceBetween: 7,
+		spaceBetween: 15,
+		autoplay: {
+			delay: 5000,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		pagination: {
 			el: '.swiper-pagination',
+			clickable: true,
 		},
 		breakpoints: {
-			1024: {
+			1400: {
 				slidesPerView: 5,
+			},
+			1024: {
+				slidesPerView: 3,
 			},
 			768: {
 				slidesPerView: 3,
@@ -120,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	// Start передвижка кнопок слайдера
+	jQuery('.main-screen .swiper_container-navigation').parent().after($('.main-screen .swiper_container-navigation'));
 	jQuery('.gallery-works_section .swiper_container-navigation').parent().after($('.gallery-works_section .swiper_container-navigation'));
 	jQuery('.services .swiper_container-navigation').parent().after($('.services .swiper_container-navigation'));
 	jQuery('.gallery-works-pull .swiper_container-navigation').parent().after($('.gallery-works-pull .swiper_container-navigation'));
@@ -167,6 +183,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		preloader: false,
 		fixedContentPos: false
 	});
+
+
+	$("input[name=tel]").mask("+3(809) 999-9999");
 
 
 	// Start fixed header menu

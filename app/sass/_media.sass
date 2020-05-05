@@ -6,26 +6,27 @@
 @media screen and (min-width: 2000px)
 	.main-screen
 		&__gallery-thumbs
-			left: 61%
-
-// ≥1200px
-+media-breakpoint-down(lg)
-	.swiper_container-navigation
-		display: none !important
-		
+			left: 1570px !important
+	
+@media screen and (min-width: 1920px)
 	.main-screen
 		&__gallery-thumbs
-			width: 250px
-			left: 72%
+			left: 1230px
+
+
+// ≥1200px
+@media screen and (min-width: 1200px)
+	.main-screen 
 		.swiper_container-navigation
-			max-width: 1040px
+			//display: none
+
 	
 	.beton
 		.form-block
 			margin-left: 30px
 		&-price
 			.form-block
-				margin-left: -35px
+				margin-left: -20px
 	
 			
 			
@@ -34,6 +35,12 @@
 	.main-screen__gallery-thumbs,
 	.services_slide__img
 		display: none !important
+	
+	.gallery-works__swiper-container
+		height: 200px
+		
+	.swiper_container-navigation
+		display: none
 		
 	.gallery-works__swiper-container
 		.swiper-slide
