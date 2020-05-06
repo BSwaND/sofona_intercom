@@ -16,35 +16,108 @@
 		
 // ≥1000px
 @media screen and (max-width: 1000px)
-	//
+	.main-screen
+		.swiper_container-navigation
+			display: none
 	
+	.price-pool
+		.form-block__trigon
+			&:after,
+			&:before
+				transform: rotate(90deg)
+				top: -62px !important
+			&:before
+				left: 50px
+			&:after
+				left: 45px
+
+
+
+	.services
+		&_gallery-thumbs
+			&__item
+				margin: 0 20px 0 0
+				height: 40px
+				padding: 8px 5px 6px
+				&:after
+					display: none
+		.swiper_container-navigation
+			display: block
+			width: 100%
+			left: 0
 			
-			
-// ≥720px
-+media-breakpoint-down(md)
+	
+	.beton
+		.form-block
+			text-align: center
+			margin: 0 auto
+			transform: none
+			width: 292px
+			background: url(../images/bg-form-2-m.svg) no-repeat
+			margin-top: -20px
+			padding: 73px 20px 35px
+			line-height: 22px
+			background-size: contain
+			&__header
+				font-weight: 400
+				font-size: 14px
+				padding: 0 20px
+				margin-bottom: 22px
+			input
+				width: 100% !important
+				//margin-right: 0
 
 	
+	.beton-price
+		.form-block
+			text-align: left
+			font-size: 14px
+			width: 330px
+			border-right: 4px solid #6d868a
+			background-size: cover
+			padding: 35px 40px 40px 80px
+			input,
+			input[type=submit]
+				width: 100% !important
+				
+		
+	.certificate
+		.swiper_container-navigation,
+		.swiper-button-next,
+		.swiper-button-prev
+			display: block !important
+
+
+// ≥720
++media-breakpoint-down(md)
+	.swiper_container-navigation
+		width: calc(100% + 30px) !important
+		left: -15px !important
+
 	
 	.main-screen__gallery-thumbs,
 	.services_slide__img
 		display: none !important
+
 	
 	.gallery-works__swiper-container
 		height: 200px
 		
-	.swiper_container-navigation
-		display: none
 		
 	.gallery-works__swiper-container
 		.swiper-slide
 			height: 100%
 			
-	.price-pool_body
-		display: block
-		&__expet-block
-			margin: 0
-			margin-bottom: 30px
-		
+	.price-pool
+		&_body
+			display: block
+			&__expet-block
+				margin: 0
+				margin-bottom: 30px
+		.form-block__header
+			text-align: center
+			margin-bottom: 22px !important
+			
 	.consultation
 		.form-block__foto
 			right: -15px
@@ -52,22 +125,45 @@
 				width: 200px
 				height: 200px
 		
-	.beton,
+
+
 	.beton-price
-		.form-block
-			text-align: center
-			background: none
-			margin-left: 0
-	.beton-price
-		.form-block__trigon
-			&:after,
-			&:before
-				//display: none
+			&__trigon
+				&:after,
+				&:before
+				input
+					width: 100% !important
+	
+	.mfp-wrap
+		.mfp-content
+			padding: 0
+		.mfp-hide_1
+			width: 300px
+			height: auto
+			padding: 30px 10px
+			background-position: -444px
 			input
 				width: 100% !important
-		
-		
-// ≥768px
+			.h2
+				text-align: center
+			p
+				text-align: center
+		.mfp-hide_2
+			width: 300px
+			height: auto
+			padding: 30px 10px
+			background-position: -374px
+			input
+				width: 100% !important
+			.h2
+				text-align: center
+			p
+				text-align: center
+			.ul-check
+				padding-left: 40px
+
+
+// ≥
 +media-breakpoint-down(sm)
 	.h1, .h2, .h3, h1, h2, h3
 		font-size: 18px
@@ -78,14 +174,20 @@
 	.container
 		padding-right: 15px
 		padding-left: 15px
-	
+		
+	.swiper_container-navigation
+		width: calc(100% - 10px) !important
+		left: 5px !important
+		
 	.price-pool_body,
 	.consultation_body,
 	.price-pool_body__expet-block,
 	.command_flex
 		flex-flow: row wrap
 	
-
+	.services
+		.swiper_container-navigation
+			left: -20% !important
 		
 	.swiper-slide_body
 		&_asaid
@@ -95,7 +197,7 @@
 		padding: 40px 0 80px
 		.form-block
 			&_body
-				margin: -8px 0 40px
+				margin: -8px 0 34px
 				&__costum
 					margin-top: 6px
 			&__foto
@@ -120,9 +222,9 @@
 		.form-block__trigon
 			padding: 35px 15px
 		input
-			width: calc(100% - 30px) !important
+			width: calc(100% - 15px) !important
 			display: block
-			margin: 5px auto
+			margin: 5px auto 10px
 	
 	.benefits
 		padding: 10px 0 0
@@ -147,39 +249,143 @@
 		.h2
 			text-align: center
 			margin-bottom: 80px
-		.form-block
-			background: url(../images/bg-form-2-m.svg) no-repeat
-			margin-top: -20px
-			padding: 73px 10px 35px
-			line-height: 22px
-			background-size: contain
-			&__header
-			font-weight: 400
-			font-size: 14px
-			input
-				width: 100% !important
+
 	
+	.certificate
+		.swiper_container-navigation
+			width: 90%
+			
 	.gallery-works-pull .gallery-works-pull__swiper-container
 		height: 210px
+		width: 270px
+
 	.gallery-works-pull
+		margin-bottom: 60px
 		.swiper-slide
 			margin-top: 15px
 			&:nth-child(n)
 				height: 100%
 		.swiper-pagination
 			display: none
-		
+		.swiper-button-next,
+		.swiper-button-prev
+			display: block !important
+		.swiper_container-navigation
+			top: 22%
+			
+			
 	.video-works
+		margin: 70px auto 40px
 		&_block
 			margin: 0
+		&_title
+			position: relative
+			text-align: center
+			margin-bottom: 40px
+			width: 100%
+			&:after
 		.form-block
+			margin-left: 0
 			width: auto
 			margin-top: 0
-			
-			
-
+			padding: 15px 10px 11px 13px
+			height: 202px
+			&__trigon
+				&:before
+					border: 20px solid transparent
+					border-right: 28px solid $accent
+					left: 41% !important
+					top: -44px !important
+				&:after
+					top: -38px !important
+					border: 17px solid transparent
+					border-right: 25px solid #fff
+					left: 42% !important
 	
 	
+	.beton-price
+		padding: 60px 0 23px
+		margin-bottom: 20px
+		&_descript
+			margin: 20px 0
+			font-size: 12px
+			font-weight: 400
+			text-align: center
+			padding: 0 30px
+		.h2
+			text-align: center
+			line-height: 23px
+			margin-bottom: 30px
+			
+		.form-block
+			background: url(../images/bg-form-2-m.svg) no-repeat
+			background-size: contain
+			padding: 70px 20px 40px 20px
+			width: 290px
+			height: 350px
+			margin: auto
+			border-right: none
+			&__header
+				font-size: 14px
+				padding: 0 8px
+				margin-bottom: 30px
+			input,
+			input[type=submit]
+				width: 100% !important
+	
+	
+	
+	.certificate
+		padding: 30px 0 20px
+		&_swiper-container
+			height: 340px
+			width: 200px
+			margin-top: 50px
+			img
+				height: 280px
+				object-fit: contain
+				width: 100%
+		.swiper-pagination
+			display: none
+			
+			
+	.video-gallery
+		.h2
+			margin-bottom: 10px
+			margin-top: 0
+		&_item
+			margin-bottom: 15px
+			height: 110px
+			img
+				height: 100%
+		.popup-youtube
+		
+		
+		
+		
+	.footer
+		margin-top: -110px
+		background: #fff
+		&_sub
+			background: none
+		&_logo
+			display: none
+		&_end
+			font-size: 8px
+			min-height: 40px
+			background: #fff
+			padding-top: 170px
+			padding-bottom: 10px
+	.map
+		flex-flow: column-reverse nowrap
+		&_header
+			text-align: center
+			font-size: 16px
+			margin-bottom: 40px
+		&_tel
+			margin-bottom: 20px
+			display: block
+		
 	.gallery-thumbs,
 	.main-screen__gallery-thumbs
 		display: none
@@ -226,10 +432,10 @@
 		input
 			width: 210px !important
 			display: block
-			margin:  15px auto
+			margin:  10px auto
 		.form-block
 			p
-				margin: 60px auto 0
+				margin: 60px auto 23px
 				font-size: 14px
 				text-align: center
 				width: 70%
@@ -239,26 +445,32 @@
 			font-size: 14px
 			text-align: center
 			width: 70%
-			margin: 23px auto
+			margin: 20px auto
 			line-height: 18px
 			
 	
 	.gallery-works
 		&_section
 			padding: 20px 0 0
+			//.swiper_container-navigation
+			//	display: block!important
+			//	width: 90%
+			//	padding: 0 10px
+			//	margin: auto
+			.swiper-button-next,
+			.swiper-button-prev
+				display: block !important
 		&__swiper-container
-			height: 230px
-			margin: 25px 0
-			//width: calc(100% + 15px)
+			height: 290px
+			width: 230px
+			margin: 25px auto 0
 			.swiper-pagination
 				display: none
-			
 			.swiper-slide
-				height: 100%
 			
 
 	.price-pool
-		margin: 37px 0 10px
+		margin: 0px 0 10px
 		.h2
 			text-align: center
 		&_body__expet-block
@@ -310,7 +522,6 @@
 			padding: 0 20px
 			.btn
 				width: calc(100% - 40px)
-				//min-width: 100%
 				margin: 5px 0
 					
 		.ul-check
@@ -321,8 +532,8 @@
 		
 		.swiper_container-navigation
 			display: block
-			width: 210px!important
-			top: 122px!important
+			width: 210px !important
+			top: 104px !important
 			margin: auto
 		.swiper-button-next,
 		.swiper-button-prev
@@ -365,26 +576,25 @@
 		#consultation-3
 			&.form-block__trigon
 			&:before
-				left: 210px !important
+				left: 70% !important
 			&:after
-				left: 205px !important
-
-		
-		
-		
-
-		
-		
+				left: 68.6% !important
+				
+				
+	.beton-price
+		.h2
+			margin-bottom: -5px
+		.lowercase
+			text-transform: uppercase
+		.form-block
+			text-align: center
+				
+				
 	.swiper-button-prev,
-	.swiper-button-next,
-	.command
+	.swiper-button-next
 			display: none !important
 			
-
-
-
-
-		
+	
 	.price-pool .form-block
 		margin: 0 !important
 		
@@ -392,10 +602,6 @@
 		display: none
 		padding-left: 0
 		
-
-			
-	.consultation__form-block
-		max-width: 290px
 			
 	.beton
 		margin-bottom: 0
@@ -403,19 +609,13 @@
 			input
 				width: 200px !important
 		&-price
-			.form-block
-				margin-left: 0
 			input
 				width: 210px !important
-		.form-block
-			margin-left: 0
-			padding-right: 30px
-			padding-left: 30px
-			transform: none
 				
 				
 	.map_img
 		flex: 100%
+		
 		
 		
 	.form-block__trigon
@@ -427,11 +627,18 @@
 			left: 40px !important
 		&:after
 			left: 35px !important
-
+			
 		
 
 @media screen and (max-width: 320px)
-	//
+	.services
+		.swiper_container-navigation
+			top: 122px !important
+			//left: -20%
+	
+	.footer_end
+		padding-top: 180px
+		padding-bottom: 10px
 	
 /*==========  Mobile First  ==========*/
 
@@ -447,11 +654,12 @@
 +media-breakpoint-up(md)
 
 
-// ≥1000px
+// ≥1024px
 @media screen and (min-width: 1024px)
 	.main-screen
 		.swiper_container-navigation
-			max-width: 1000px
+			max-width: 1024px
+			left: 0
 	
 	.main-screen__gallery-thumbs
 		left: 780px
@@ -459,9 +667,9 @@
 	.gallery-works_section .swiper_container-navigation,
 	.services .swiper_container-navigation,
 	.certificate .swiper_container-navigation
-		width: 1000px
-		left: 0px
-		right: 0px
+		width: 1024px
+		left: -7px
+		right: 0
 		
 	.main-screen__swiper-container
 		.swiper-slide_body
@@ -478,17 +686,31 @@
 		margin-left: 0px
 		width: 500px
 		height: 180px
-		
+	
+@media screen and (min-width: 1300px)
+	.main-screen
+		.swiper_container-navigation
+			max-width: 1080px
+		&__gallery-thumbs
+			left: 930px
+	
+	.gallery-works_section .swiper_container-navigation,
+	.services .swiper_container-navigation,
+	.certificate .swiper_container-navigation
+		width: 1080px
+		left: -40px
+
 		
 @media screen and (min-width: 1400px)
 	.main-screen
 		.swiper_container-navigation
 			max-width: 1080px
+			
 	.gallery-works_section .swiper_container-navigation,
 	.services .swiper_container-navigation,
 	.certificate .swiper_container-navigation
 		width: 1080px
-	
+		left: -40px
 	.main-screen__gallery-thumbs
 		left: 990px
 		

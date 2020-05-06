@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		direction: 'vertical',
 		height: 300,
 	});
-	new Swiper('.main-screen__swiper-container', {
+	let mainScreenGallery = new Swiper('.main-screen__swiper-container', {
 		loop: true,
 		autoplay: {
 			delay: 5000,
+			stopOnLastSlide: true,
+			disableOnInteraction: true
 		},
 		thumbs: {
 			swiper: mainScreenGalleryThumbs
@@ -23,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 	});
 
-
+	jQuery('.main-screen input').click(function () {
+		mainScreenGallery.autoplay.stop();
+	})
 
 	new Swiper('.gallery-works__swiper-container', {
 		spaceBetween: 15,
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				slidesPerColumn: 2,
 			},
 			768: {
-				slidesPerView: 2,
+				slidesPerView: 4,
 				slidesPerColumn: 1,
 			},
 
@@ -75,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			},
 			768: {
 				slidesPerView: 3,
-				slidesPerColumn: 1,
+				slidesPerColumn: 2,
 				spaceBetween: 15,
 			},
 
@@ -129,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				slidesPerView: 5,
 			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 5,
 			},
 
 			576: {
@@ -192,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	jQuery('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-		disableOn: 700,
+		//disableOn: 700,
 		type: 'iframe',
 		mainClass: 'mfp-fade',
 		removalDelay: 160,

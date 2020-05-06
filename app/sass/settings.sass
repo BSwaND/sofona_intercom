@@ -71,7 +71,7 @@ input[type=submit]
 		border-radius: 0
 		background: $accent
 	&_container-navigation
-		top: 50%
+		top: 48%
 		position: absolute
 		left: -60px
 		right: -60px
@@ -149,45 +149,90 @@ input[type=submit]
 	&-close
 		transform: translateY(40px)
 	&-content
-		background: #fff
-		max-width: 680px
-		padding: 50px 30px
+		min-width: 300px
+		padding: 35px 30px 30px 65px
 		margin: auto
 		min-height: 400px
 		border-radius: 1px
 		position: relative
 		text-align: center
 		.h2
-			margin-bottom: 0
+			margin-bottom: 5px
+			color: $accent
+			font-size: 18px
+			font-weight: 600
+			text-align: left
+			letter-spacing: 1px
 		p
 			font-weight: 400
-		input
-			background: $grey
-		.btn
-			background: $accent
+			text-align: left
+			font-size: 14px
+			letter-spacing: 0.5px
+		.form-block__header
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 16px
 		.form-block
-			&__header
-				font-size: 16px
-				font-weight: 600
-				text-transform: uppercase
+			text-align: left
+			
+			
+	&-hide_1
+		background: #fff url(../images/bg-popap.jpg) bottom right no-repeat
+		background-size: cover
+		width: 855px
+		margin: auto
+		padding: 34px 0 0px 65px
+		position: relative
+		height: 410px
+		form
+			text-align: left
+			margin-top: 18px
+		input
+			width: 305px
+			background: $grey
+			margin-right: 13px
+			&[type=submit]
+				width: 305px
+				background: $accent
+			
+	&-hide_2
+		background: #fff url(../images/bg-popap.jpg) bottom right no-repeat
+		background-size: cover
+		width: 725px
+		margin: auto
+		padding: 34px 0 0px 65px
+		position: relative
+		height: 380px
+		.ul-check
+			margin-top: 52px !important
+			font-size: 16px !important
+			font-weight: 400 !important
+			letter-spacing: 1px
+			margin: 50px 30px 32px 0 !important
+		input
+			width: 236px
+			background: $grey
+			margin-right: 16px
+			&[type=submit]
+				width: 243px
+				background: $accent
+
+	
+	
+
 	&-figure:after
 		background: none
 		box-shadow: none
 	&_list-ul
 		.ul-check
-			display: flex
-			justify-content: center
+			display: block
 			font-size: 12px
 			text-align: left
-			margin: 40px 30px
+			margin: 50px 30px 40px 0
 		li
-			flex:  1
 			margin-right: 30px
 			padding-right: 15px
 			&:before
-				outline:  1px solid $accent
-				border: 2px solid #fff
-				height: 15px
 			&:last-child
 				margin-right: 0
 
@@ -200,8 +245,12 @@ input[type=submit]
 .popup-modal-dismiss
 	position: absolute
 	right: 20px
-	top: 20px
+	top: 14px
 	color: $text
+	font-size: 20px
+	font-weight: 600
+	&:hover
+		text-decoration: none
 	
 // End magnifik popap
 
