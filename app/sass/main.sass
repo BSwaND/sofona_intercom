@@ -676,14 +676,15 @@ h1,.h1, h2, .h2, h3, .h3
 .command
 	padding: 35px 0
 	text-align: center
+	position: relative
 	&_flex
 		display: flex
 	&_item
-		margin:  15px
+		//margin:  15px
 		cursor: pointer
 		transition: all 0.4s
-		position: relative
-		flex: 20%
+		//position: relative
+		//flex: 20%
 		height: 150px
 		&_img
 			border: 1px solid $accent
@@ -697,8 +698,8 @@ h1,.h1, h2, .h2, h3, .h3
 			font-weight: 400
 			display: block
 			position: absolute
-			width: calc(100% - 10px)
-			height: 152px
+			width: calc(100% - 20px)
+			height: 91px
 			top: 5px
 			left: 5px
 			padding: 60px 5px 0
@@ -712,6 +713,26 @@ h1,.h1, h2, .h2, h3, .h3
 		&__header
 			text-transform: uppercase
 			margin-bottom: 10px
+			
+	&_swiper-container
+		height: 427px
+	.swiper_container-navigation
+		top: 58%
+		left: 5px !important
+		width: calc(100% - 10px) !important
+
+	
+	.swiper-button-next,
+	.swiper-button-prev
+		display: block !important
+
+		
+	.swiper-slide
+		text-align: center
+		background: #fff
+		height: calc((100% - 90px) / 2)
+		
+		
 
 	.h2
 		margin-bottom: 40px

@@ -163,6 +163,8 @@
 				padding-left: 40px
 
 
+			
+
 // ≥
 +media-breakpoint-down(sm)
 	.h1, .h2, .h3, h1, h2, h3
@@ -333,7 +335,33 @@
 			input[type=submit]
 				width: 100% !important
 	
-	
+
+
+	.command
+		&_item
+			width: 210px
+			display: block
+			margin: auto
+			position: relative
+			&__header
+				font-weight: 600
+			img
+				height: 200px
+		&_swiper-container
+			height: 260px
+		&_item_content
+			padding: 0
+			position: absolute
+			opacity: 1
+			height: 0px
+			display: block
+			top: 220px
+			color: $text
+			background: none
+			font-size: 12px
+			text-shadow: none
+
+
 	
 	.certificate
 		padding: 30px 0 20px
@@ -582,14 +610,20 @@
 				
 				
 	.beton-price
+		&_descript
+			width: auto
 		.h2
 			margin-bottom: -5px
 		.lowercase
 			text-transform: uppercase
 		.form-block
 			text-align: center
-				
-				
+			
+		
+			
+
+	
+	
 	.swiper-button-prev,
 	.swiper-button-next
 			display: none !important
@@ -652,7 +686,13 @@
 
 // ≤768px
 +media-breakpoint-up(md)
-
+	.command
+		&_item_content
+			//padding-top: 40px
+			//height: calc(100% - 40px)
+		
+		.swiper_container-navigation
+			top: 50%
 
 // ≥1024px
 @media screen and (min-width: 1024px)
@@ -686,6 +726,11 @@
 		margin-left: 0px
 		width: 500px
 		height: 180px
+		
+	
+	.command
+		.swiper_container-navigation
+			display: none
 	
 @media screen and (min-width: 1300px)
 	.main-screen

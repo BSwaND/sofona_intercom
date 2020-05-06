@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	jQuery('.main-screen input').click(function () {
 		mainScreenGallery.autoplay.stop();
-	})
+	});
 
 	new Swiper('.gallery-works__swiper-container', {
 		spaceBetween: 15,
@@ -143,6 +143,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	new Swiper('.command_swiper-container', {
+		slidesPerView: 5,
+		slidesPerColumn: 2,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		breakpoints: {
+			1024: {
+				slidesPerView: 5,
+				slidesPerColumn: 2,
+			},
+			768: {
+				slidesPerView: 4,
+				slidesPerColumn: 2,
+				},
+			320: {
+				slidesPerView: 1,
+				slidesPerColumn: 1,
+			}
+		}
+	});
+
+
 
 	// Start передвижка кнопок слайдера
 	jQuery('.main-screen .swiper_container-navigation').parent().after($('.main-screen .swiper_container-navigation'));
@@ -151,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	jQuery('.gallery-works-pull .swiper_container-navigation').parent().after($('.gallery-works-pull .swiper_container-navigation'));
 	jQuery('.gallery-works-pull .swiper-pagination').parent().after($('.gallery-works-pull .swiper-pagination'));
 	jQuery('.certificate .swiper_container-navigation').parent().after($('.certificate .swiper_container-navigation'));
+	jQuery('.command .swiper_container-navigation').parent().after($('.command .swiper_container-navigation'));
 
 	// End передвижка кнопок слайдера
 
