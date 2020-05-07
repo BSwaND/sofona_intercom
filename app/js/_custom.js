@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 			titleSrc: function(item) {
 				//return item.el.attr('title') + '<small></small>';
-				return  '<a  href="#form-modal" class="btn btn_accent popup-modal gallery-works_btn-form">Хочу такой бассейн</a>';
+				//return  '<a  href="#form-modal" class="btn btn_accent popup-modal gallery-works_btn-form">Хочу такой бассейн</a>';
 			}
 		},
 
@@ -295,6 +295,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	// End fixed header menu
 
 
+
+
+	function getParameterByName(name) {
+		var name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		let regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+		let results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+
+		// Give the URL parameters variable names
+		let source = getParameterByName('utm_source');
+		let medium = getParameterByName('utm_medium');
+		let campaign = getParameterByName('utm_campaign');
+		let content = getParameterByName('utm_content');
+		let term = getParameterByName('utm_term');
+
+		// Put the variable names into the hidden fields in the form.
+		jQuery(".utm_source").val(source);
+		jQuery(".utm_medium").val(medium);
+		jQuery(".utm_campaign").val(campaign);
+		jQuery(".utm_content").val(content);
+		jQuery(".utm_term").val(term);
 
 });
 
